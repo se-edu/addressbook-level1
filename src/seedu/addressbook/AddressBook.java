@@ -325,7 +325,7 @@ public class AddressBook {
      */
 
     /**
-     * Checks which command the user want to trigger, then run the corresponding function
+     * Executes the command as specified by the {@code userInputString}
      * 
      * @param userInputString  raw input from user
      * @return  feedback about how the command was executed
