@@ -104,7 +104,7 @@ There is no need to save manually.
 Address book data are saved in a file called `addressbook.txt` in the project root folder.
 You can change the location by specifying the file path as a program argument.
 
-Examples: 
+Example: 
 * `java seedu.addressbook.AddressBook mydata.txt`
 
 > The file name must end in `.txt` for it to be acceptable to the program.
@@ -162,7 +162,7 @@ corresponding exercises.
 
 ### Set up a project in an IDE `[LO-IdeSetup]`
 
-##### Exercise : Setup project in Eclipse 
+##### Exercise: Setup project in Eclipse 
 * Learn [how to set up a new project in Eclipse]
   (https://se-edu.github.io/addressbook-level1/doc/Getting started with Eclipse.pptx). <br>
   Create a new project in Eclipse and write a small HelloWorld program.
@@ -178,7 +178,7 @@ The `AddressBook.java` code is rather, which makes it cumbersome to navigate by 
 Navigating code using IDE shortcuts is a more efficient option. 
 For example, <kbd>F3</kbd> will navigate to the definition of the method/field at the cursor.
  
-##### Ex : Learn to navigate code using shortcuts
+##### Exercise: Learn to navigate code using shortcuts
 Learn some Eclipse code navigation shortcuts 
 (you can use Web resources like [this one](https://www.shortcutworld.com/en/win/Eclipse.html)). 
 For example, learn the shortcuts to,
@@ -191,7 +191,7 @@ For example, learn the shortcuts to,
 
 ### Use a debugger `[LO-Debugging]`
 
-##### Ex : Learn to step through code using the debugger
+##### Exercise: Learn to step through code using the debugger
 Prerequisite: `[LO-IdeSetup]`
 
 Learn Eclipse debugging features from [these slides](https://se-edu.github.io/addressbook-level1/doc/Debugging with Eclipse.pptx)
@@ -208,7 +208,7 @@ Here are some things you can do in your demonstration.
 
 ### Automate CLI testing `[LO-AutomatedCliTesting]`
 
-##### Ex : Practice automated CLI testing
+##### Exercise: Practice automated CLI testing
 
 * Run the tests as explained in the [Testing](#testing) section.
 * Examine the test script to understand how the script works.
@@ -223,7 +223,7 @@ to store a list of `String` or `String[]` objects.
 
 Resources: [ArrayList class tutorial (from javaTpoint.com)](http://www.javatpoint.com/ArrayList-in-collection-framework)
 
-##### Ex: Use `HashMap`
+##### Exercise: Use `HashMap`
 
 Currently, a person's details are stored as a `String[]`. Modify the code to use a `HashMap<String, String>` instead.
 A sample code snippet is given below.
@@ -240,7 +240,7 @@ Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/
 
 ### Use Enums `[LO-Enums]`
 
-##### Ex: Use `HashMap` + `Enum`
+##### Exercise: Use `HashMap` + `Enum`
 
 Similar to the exercise in the `LO-Collections` section, but also bring in Java `enum` feature.
 ```java
@@ -257,7 +257,7 @@ john.put(PersonProperty.EMAIL, "john.doe@email.com");
 Note how the `showToUser` method uses
 [Java Varargs feature](http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html) .
 
-##### Ex: Use Varargs
+##### Exercise: Use Varargs
 Modify the code to remove the use of the Varargs feature.
 Compare the code with and without the varargs feature.
 
@@ -281,7 +281,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 * [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
 * [Screencast] [A short refactoring demo using Eclipse](http://www.youtube.com/watch?v=7KDruqCzdpc)
 
-#### Ex: Refactor the code to make it better
+#### Exercise: Refactor the code to make it better
 Note: this exercise covers two other Learning Outcomes: `[LO-CodingBestPractices]`, `[LO-CodingBestPractices]`
 * Improve the code in the following ways,
   * Fix [coding standard](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/coding-standards-java.html) 
@@ -316,22 +316,22 @@ Here is an example.
     }
 ```
 
-##### Ex 1: Reduce SLAP of method
+##### Exercise 1: Reduce SLAP of method
 In the `main` method, replace the `processProgramArgs(args)` call with the actual code of that method.
 The `main` method no longer has SLAP. Notice how mixing low level code with high level code reduces
 readability.
 
-##### Ex 2: Refactor the code to make it worse!
+##### Exercise 2: Refactor the code to make it worse!
 Sometimes, going in the wrong direction can be a good learning experience too. 
-In this exercise, we explore how low code code quality can go.
-* Refactor the code to make the code as worse as possible.<br>
+In this exercise, we explore how low code qualities can go.
+* Refactor the code to make the code as bad as possible.<br>
   i.e. How bad can you make it without breaking the functionality while still making it look like it was written by a 
-  programmer (but a very bad programmer :-).
+  programmer (but a very bad programmer :-)).
 * In particular, inlining methods can worsen the code quality fast.
 
 ### Work in a 1kLoC code base`[LO-1KLoC]`
 
-#### Ex : Enhance the code
+#### Exercise: Enhance the code
 Enhance the AddressBook to prove that you can successfully work in a codebase of 1KLoC. <br>
 Remember to change code in small steps and commit after each significant change.
 
