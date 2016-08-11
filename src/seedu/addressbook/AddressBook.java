@@ -5,10 +5,19 @@ package seedu.addressbook;
  * ====================================================================
  */
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.Set;
 
 /* ==============NOTE TO STUDENTS======================================
  * This class header comment below is brief because details of how to
@@ -242,7 +251,7 @@ public class AddressBook {
      * Processes the program main method run arguments.
      * If a valid storage file is specified, sets up that file for storage.
      * Otherwise sets up the default file for storage.
-     * 
+     *
      * @param args full program arguments passed to application main method
      */
     private static void processProgramArgs(String[] args) {
@@ -321,7 +330,7 @@ public class AddressBook {
 
     /**
      * Executes the command as specified by the {@code userInputString}
-     * 
+     *
      * @param userInputString  raw input from user
      * @return  feedback about how the command was executed
      */
@@ -382,7 +391,7 @@ public class AddressBook {
 
         // checks if args are valid (decode result will not be present if the person is invalid)
         if (!decodeResult.isPresent()) {
-            return getMessageForInvalidCommandInput(COMMAND_WORD_ADD, getUsageInfoForAddCommand());
+            return getMessageForInvalidCommandInput(COMMAND_ADD_WORD, getUsageInfoForAddCommand());
         }
 
         // add the person as specified
@@ -406,7 +415,7 @@ public class AddressBook {
     /**
      * Finds and lists all persons in address book whose name contains any of the argument keywords.
      * Keyword matching is case sensitive.
-     * 
+     *
      * @param commandArgs full command args string from the user
      * @return feedback display message for the operation result
      */
@@ -456,13 +465,13 @@ public class AddressBook {
 
     /**
      * Deletes person identified using last displayed index.
-     * 
+     *
      * @param commandArgs full command args string from the user
      * @return feedback display message for the operation result
      */
     private static String executeDeletePerson(String commandArgs) {
         if (!isDeletePersonArgsValid(commandArgs)) {
-            return getMessageForInvalidCommandInput(COMMAND_WORD_DELETE, getUsageInfoForDeleteCommand());
+            return getMessageForInvalidCommandInput(COMMAND_DELETE_WORD, getUsageInfoForDeleteCommand());
         }
         final int targetVisibleIndex = extractTargetIndexFromDeletePersonArgs(commandArgs);
         if (!isDisplayIndexValidForLastPersonListingView(targetVisibleIndex)) {
@@ -521,7 +530,7 @@ public class AddressBook {
 
     /**
      * Clears all persons in the address book.
-     * 
+     *
      * @return feedback display message for the operation result
      */
     private static String executeClearAddressBook() {
@@ -806,7 +815,7 @@ public class AddressBook {
         ALL_PERSONS.addAll(persons);
     }
 
-    
+
     /*
      * ===========================================
      *             PERSON METHODS
@@ -1074,7 +1083,7 @@ public class AddressBook {
 
     /**
      * Builds string for showing 'add' command usage instruction
-     * 
+     *
      * @return  'add' command usage instruction
      */
     private static String getUsageInfoForAddCommand() {
@@ -1154,10 +1163,10 @@ public class AddressBook {
 
     /**
      * Removes sign(p/, d/, etc) from parameter string
-     * 
+     *
      * @param s  Parameter as a string
      * @param sign  Parameter sign to be removed
-     * 
+     *
      * @return  Priority string without p/
      */
     private static String removePrefixSign(String s, String sign) {

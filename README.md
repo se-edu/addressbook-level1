@@ -141,8 +141,10 @@ Example:
 
 **Mac/Unix/Linux**
 
-Create a script similar to the windows version.
-You can use the `diff` command in place of the `FC` command.
+1. Open a terminal window in the `test` folder
+2. Run the `runtests.sh` script
+3. If the script reports that there is no difference between `actual.txt` and `expected.txt`, 
+   the test has passed.
 
 **Troubleshooting test failures**
 
