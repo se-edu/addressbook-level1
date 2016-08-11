@@ -5,7 +5,7 @@
 || ===================================================
 || Using default storage file : addressbook.txt
 || Enter command: || [Command entered:  sfdfd]
-|| Invalid command format:   sfdfd 
+|| Invalid command format: sfdfd 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
@@ -35,42 +35,42 @@
 || 0 persons found!
 || ===================================================
 || Enter command: || [Command entered:  add wrong args wrong args]
-|| Invalid command format:   add wrong args wrong args 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 valid@email.butNoPrefix]
-|| Invalid command format:   add Valid Name p/12345 valid@email.butNoPrefix 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
-|| Invalid command format:   add Valid Name 12345 e/valid@email.butPhonePrefixMissing 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
 || ===================================================
 || Enter command: || [Command entered:  add []\[;] p/12345 e/valid@e.mail]
-|| Invalid command format:   add []\[;] p/12345 e/valid@e.mail 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/not_numbers e/valid@e.mail]
-|| Invalid command format:   add Valid Name p/not_numbers e/valid@e.mail 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 e/notAnEmail]
-|| Invalid command format:   add Valid Name p/12345 e/notAnEmail 
+|| Invalid command format: add 
 || add: Adds a person to the address book.
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
@@ -160,28 +160,28 @@
 || 2 persons found!
 || ===================================================
 || Enter command: || [Command entered:  delete]
-|| Invalid command format:   delete 
+|| Invalid command format: delete 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
 || 
 || ===================================================
 || Enter command: || [Command entered:  delete should be only one number]
-|| Invalid command format:   delete should be only one number 
+|| Invalid command format: delete 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
 || 
 || ===================================================
 || Enter command: || [Command entered:  delete -1]
-|| Invalid command format:   delete -1 
+|| Invalid command format: delete 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1
 || 
 || ===================================================
 || Enter command: || [Command entered:  delete 0]
-|| Invalid command format:   delete 0 
+|| Invalid command format: delete 
 || delete: Deletes a person identified by the index number used in the last find/list call.
 || 	Parameters: INDEX
 || 	Example: delete 1

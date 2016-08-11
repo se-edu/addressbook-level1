@@ -178,11 +178,6 @@ public class AddressBook {
     private static ArrayList<String[]> latestPersonListingView = getAllPersonsInAddressBook(); // initial view is of all
 
     /**
-     * Latest command entered by the user.
-     */
-    private static String userCommand;
-
-    /**
      * The path to the file used for storing person data.
      */
     private static String storageFilePath;
@@ -199,7 +194,7 @@ public class AddressBook {
         processProgramArgs(args);
         loadDataFromStorage();
         while (true) {
-            userCommand = getUserInput();
+            String userCommand = getUserInput();
             echoUserCommand(userCommand);
             String feedback = executeCommand(userCommand);
             showResultToUser(feedback);
@@ -350,7 +345,7 @@ public class AddressBook {
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
         default:
-            return getMessageForInvalidCommandInput(getUsageInfoForAllCommands());
+            return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
     }
 
@@ -370,7 +365,7 @@ public class AddressBook {
      * @param correctUsageInfo message showing the correct usage
      * @return invalid command args feedback message
      */
-    private static String getMessageForInvalidCommandInput(String correctUsageInfo) {
+    private static String getMessageForInvalidCommandInput(String userCommand, String correctUsageInfo) {
         return String.format(MESSAGE_INVALID_COMMAND_FORMAT, userCommand, correctUsageInfo);
     }
 
@@ -387,7 +382,7 @@ public class AddressBook {
 
         // checks if args are valid (decode result will not be present if the person is invalid)
         if (!decodeResult.isPresent()) {
-            return getMessageForInvalidCommandInput(getUsageInfoForAddCommand());
+            return getMessageForInvalidCommandInput(COMMAND_WORD_ADD, getUsageInfoForAddCommand());
         }
 
         // add the person as specified
@@ -467,7 +462,7 @@ public class AddressBook {
      */
     private static String executeDeletePerson(String commandArgs) {
         if (!isDeletePersonArgsValid(commandArgs)) {
-            return getMessageForInvalidCommandInput(getUsageInfoForDeleteCommand());
+            return getMessageForInvalidCommandInput(COMMAND_WORD_DELETE, getUsageInfoForDeleteCommand());
         }
         final int targetVisibleIndex = extractTargetIndexFromDeletePersonArgs(commandArgs);
         if (!isDisplayIndexValidForLastPersonListingView(targetVisibleIndex)) {
