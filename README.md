@@ -230,8 +230,8 @@ Resources: [ArrayList class tutorial (from javaTpoint.com)](http://www.javatpoin
 Currently, a person's details are stored as a `String[]`. Modify the code to use a `HashMap<String, String>` instead.
 A sample code snippet is given below.
 ```java
-private static final PERSON_PROPERTY_NAME = "name";
-private static final PERSON_PROPERTY_EMAIL = "email";
+private static final String PERSON_PROPERTY_NAME = "name";
+private static final String PERSON_PROPERTY_EMAIL = "email";
 ...
 HashMap<String,String> john = new HashMap<>();
 john.put(PERSON_PROPERTY_NAME, "John Doe");
