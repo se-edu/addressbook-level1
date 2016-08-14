@@ -274,7 +274,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`.
 
 ### Apply coding best practices `[LO-CodingBestPractices]`
 Most of the given code follows the best practices mentioned
-[in this document](http://www.comp.nus.edu.sg/~cs2103/AY1415S1/files/%255bHandout%2520for%2520L2P1%255d%2520%2520Good%2520Code,%2520Bad%2520Code%2520-%2520Toward%2520Production%2520Quality%2520Code.pdf).
+[in this document](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/files/handouts/%5bL2P1%5d%20Good%20Code,%20Bad%20Code%20-%20Toward%20Production%20Quality%20Code.pdf).
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`
 
