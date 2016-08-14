@@ -288,7 +288,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingBestPractices
 * Improve the code in the following ways,
   * Fix [coding standard](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/coding-standards-java.html) 
     violations.
-  * Fix violations of the best practices given in [in this document](http://www.comp.nus.edu.sg/~cs2103/AY1415S1/files/%255bHandout%2520for%2520L2P1%255d%2520%2520Good%2520Code,%2520Bad%2520Code%2520-%2520Toward%2520Production%2520Quality%2520Code.pdf)
+  * Fix violations of the best practices given in [in this document](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/files/handouts/%5bL2P1%5d%20Good%20Code,%20Bad%20Code%20-%20Toward%20Production%20Quality%20Code.pdf)
   * Any other change that you think will improve the quality of the code.
 * Try to do the modification as a combination of standard refactorings given in this
   [catalog](http://refactoring.com/catalog/)
