@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# change to script directory
+cd "${0%/*}"
+
 # create ../bin directory if not exists
 if [ ! -d "../bin" ]
 then
@@ -7,7 +10,7 @@ then
 fi
 
 # compile the code into the bin folder
-javac  ../src/seedu/addressbook/Addressbook.java -d ../bin
+javac  ../src/seedu/addressbook/AddressBook.java -d ../bin
 
 # run the program, feed commands from input.txt file and redirect the output to the actual.txt
 java -classpath ../bin seedu.addressbook.AddressBook < input.txt > actual.txt
