@@ -280,6 +280,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 
 ### Refactor code `[LO-Refactor]`
 
+**Resources**:
 * [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
 * [Screencast] [A short refactoring demo using Eclipse](http://www.youtube.com/watch?v=7KDruqCzdpc)
 
@@ -295,7 +296,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
 * As far as possible, use automated refactoring features in Eclipse.
 * If you know how to use Git, commit code after each refactoring.<br>
   In the commit message, mention which refactoring you applied.<br>
-  Example commit messages: `Extracted variable isValidPerson`, `Inlined method isValidPerson()`
+  Example commit messages: `Extract variable isValidPerson`, `Inline method isValidPerson()`
 * Remember to run the test script after each refactoring to prevent [regressions](https://en.wikipedia.org/wiki/Software_regression).
 
 ### Abstract methods well `[LO-MethodAbstraction]`
@@ -334,8 +335,8 @@ In this exercise, we explore how low code qualities can go.
 ### Work in a 1kLoC code base`[LO-1KLoC]`
 
 #### Exercise: Enhance the code
-Enhance the AddressBook to prove that you can successfully work in a codebase of 1KLoC. <br>
-Remember to change code in small steps and commit after each significant change.
+Enhance the AddressBook to prove that you can work in a codebase of 1KLoC. <br>
+Remember to change code in small steps, update/run tests after each change, and commit after each significant change.
 
 Some suggested enhancements:
 
