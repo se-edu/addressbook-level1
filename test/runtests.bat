@@ -1,4 +1,8 @@
 @ECHO OFF
+
+REM create bin directory if it doesn't exist
+if not exist ..\bin mkdir ..\bin
+
 REM compile the code into the bin folder
 javac  ..\src\seedu\addressbook\Addressbook.java -d ..\bin
 
