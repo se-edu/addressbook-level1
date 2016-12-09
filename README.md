@@ -267,7 +267,7 @@ Compare the code with and without the varargs feature.
 
 ### Follow a coding standard `[LO-CodingStandard]`
 
-The given code follows the [coding standard](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/coding-standards-java.html) 
+The given code follows the [coding standard](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html) 
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
