@@ -9,8 +9,24 @@
 
 **Table of Contents**
 * [User Guide](#user-guide)
+    * [Starting the program](#starting-the-program)
+    * [List of commands](#list-of-commands)
 * [Developer Guide](#developer-guide)
+    * [Setting Up](#setting-up)
+    * [Testing](#testing)
 * [Learning Outcomes](#learning-outcomes)
+    * [Set up a project in an IDE](#set-up-a-project-in-an-ide-lo-idesetup)
+    * [Navigate code efficiently](#navigate-code-efficiently-lo-codenavigation)
+    * [Use a debugger](#use-a-debugger-lo-debugging)
+    * [Automate CLI testing](#automate-cli-testing-lo-automatedclitesting)
+    * [Use Collections](#use-collections-lo-collections)
+    * [Use Enums](#use-enums-lo-enums)
+    * [Use Varargs](#use-varargs-lo-varargs)
+    * [Follow a coding standard](#follow-a-coding-standard-lo-codingstandard)
+    * [Apply coding best practices](#apply-coding-best-practices-lo-codingbestpractices)
+    * [Refactor code](#refactor-code-lo-refactor)
+    * [Abstract methods well](#abstract-methods-well-lo-methodabstraction)
+    * [Work in a 1kLoC code base](#work-in-a-1kloc-code-baselo-1kloc)
 * [Contributors](#contributors)
 * [Contact Us](#contact-us)
 
@@ -20,7 +36,7 @@
 This product is not meant for end-users and therefore there is no user-friendly installer. 
 Please refer to the [Setting up](#setting-up) section to learn how to set up the project.
 
-#### Starting the program
+## Starting the program
 
 **Using Eclipse**
 
@@ -38,6 +54,7 @@ Please refer to the [Setting up](#setting-up) section to learn how to set up the
 4. Type `java seedu.addressbook.AddressBook`, then <kbd>Enter</kbd> to execute
 5. Now you can interact with the program through the CLI
 
+## List of commands
 #### Viewing help : `help`
 Format: `help` 
  > Help is also shown if you enter an incorrect command e.g. `abcd`
@@ -162,7 +179,7 @@ Example:
 Here are the things you should be able to do after studying this code and completing the
 corresponding exercises.
 
-### Set up a project in an IDE `[LO-IdeSetup]`
+## Set up a project in an IDE `[LO-IdeSetup]`
 
 ##### Exercise: Setup project in Eclipse 
 * Learn [how to set up a new project in Eclipse]
@@ -175,7 +192,7 @@ corresponding exercises.
 * [Run the program](#starting-the-program) from within Eclipse, and try the features described in
   the [User guide](#user-guide) section
 
-### Navigate code efficiently `[LO-CodeNavigation]`
+## Navigate code efficiently `[LO-CodeNavigation]`
 The `AddressBook.java` code is rather, which makes it cumbersome to navigate by scrolling alone. 
 Navigating code using IDE shortcuts is a more efficient option. 
 For example, <kbd>F3</kbd> will navigate to the definition of the method/field at the cursor.
@@ -191,7 +208,7 @@ For example, learn the shortcuts to,
   * find where a method/field is being used
   * ...
 
-### Use a debugger `[LO-Debugging]`
+## Use a debugger `[LO-Debugging]`
 
 ##### Exercise: Learn to step through code using the debugger
 Prerequisite: `[LO-IdeSetup]`
@@ -208,7 +225,7 @@ Here are some things you can do in your demonstration.
 4. 'Step into', and 'step out of', methods as you step through the code
 5. ...
 
-### Automate CLI testing `[LO-AutomatedCliTesting]`
+## Automate CLI testing `[LO-AutomatedCliTesting]`
 
 ##### Exercise: Practice automated CLI testing
 
@@ -218,7 +235,7 @@ Here are some things you can do in your demonstration.
   Modify `expected.txt` to make the tests pass again.
 * Edit the `AddressBook.java` to modify the behavior slightly and modify tests to match.
 
-### Use Collections `[LO-Collections]`
+## Use Collections `[LO-Collections]`
 
 Note how the `AddressBook` class uses `ArrayList<>` class (from the Java `Collections` library)
 to store a list of `String` or `String[]` objects.
@@ -240,7 +257,7 @@ john.put(PERSON_PROPERTY_EMAIL, "john.doe@email.com");
 ```
 Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/2013/12/hashmap-in-java-with-example/)
 
-### Use Enums `[LO-Enums]`
+## Use Enums `[LO-Enums]`
 
 ##### Exercise: Use `HashMap` + `Enum`
 
@@ -254,7 +271,7 @@ john.put(PersonProperty.EMAIL, "john.doe@email.com");
 //etc.
 ```
 
-### Use Varargs `[LO-Varargs]`
+## Use Varargs `[LO-Varargs]`
 
 Note how the `showToUser` method uses
 [Java Varargs feature](http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html) .
@@ -263,22 +280,20 @@ Note how the `showToUser` method uses
 Modify the code to remove the use of the Varargs feature.
 Compare the code with and without the varargs feature.
 
-
-
-### Follow a coding standard `[LO-CodingStandard]`
+## Follow a coding standard `[LO-CodingStandard]`
 
 The given code follows the [coding standard](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html) 
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
 
-### Apply coding best practices `[LO-CodingBestPractices]`
+## Apply coding best practices `[LO-CodingBestPractices]`
 Most of the given code follows the best practices mentioned
 [in this document](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/files/handouts/%5bL2P1%5d%20Good%20Code,%20Bad%20Code%20-%20Toward%20Production%20Quality%20Code.pdf).
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`
 
-### Refactor code `[LO-Refactor]`
+## Refactor code `[LO-Refactor]`
 
 **Resources**:
 * [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
@@ -299,7 +314,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
   Example commit messages: `Extract variable isValidPerson`, `Inline method isValidPerson()`
 * Remember to run the test script after each refactoring to prevent [regressions](https://en.wikipedia.org/wiki/Software_regression).
 
-### Abstract methods well `[LO-MethodAbstraction]`
+## Abstract methods well `[LO-MethodAbstraction]`
 
 Notice how most of the methods in `AddressBook` are short, focused, and written at a single
 level of abstraction (_cf_ [SLAP](http://programmers.stackexchange.com/questions/110933/how-to-determine-the-levels-of-abstraction))
@@ -332,7 +347,7 @@ In this exercise, we explore how low code qualities can go.
   programmer (but a very bad programmer :-)).
 * In particular, inlining methods can worsen the code quality fast.
 
-### Work in a 1kLoC code base`[LO-1KLoC]`
+## Work in a 1kLoC code base`[LO-1KLoC]`
 
 #### Exercise: Enhance the code
 Enhance the AddressBook to prove that you can work in a codebase of 1KLoC. <br>
