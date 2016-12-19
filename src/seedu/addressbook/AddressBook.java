@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -305,12 +307,40 @@ public class AddressBook {
     }
 
     /**
-     * Returns true if the given file is acceptable.
-     * The file path is acceptable if it ends in '.txt'
-     * TODO: Implement a more rigorous validity checking.
+     * Returns true if the given file path is valid.
+     * A file path is valid if it has a valid parent directory as determined by {@link #hasValidFolder}
+     * and a valid file name as determined by {@link #hasValidFileName}.
      */
     private static boolean isValidFilePath(String filePath) {
-        return filePath.endsWith(".txt");
+        if (filePath == null) {
+            return false;
+        }
+        Path filePathToValidate;
+        try {
+            filePathToValidate = Paths.get(filePath);
+        } catch (InvalidPathException ipe) {
+            return false;
+        }
+        return hasValidParentDirectory(filePathToValidate) && hasValidFileName(filePathToValidate);
+    }
+
+    /**
+     * Returns true if the file path has a parent directory that exists.
+     */
+    private static boolean hasValidParentDirectory(Path filePath) {
+        Path parentDirectory = filePath.getParent();
+        return parentDirectory == null || Files.isDirectory(parentDirectory);
+    }
+
+    /**
+     * Returns true if file path has a valid file name.
+     * File name is valid if it has an extension and no reserved characters.
+     * Reserved characters are OS-dependent.
+     * If a file already exists, it must be a regular file.
+     */
+    private static boolean hasValidFileName(Path filePath) {
+        return filePath.getFileName().toString().lastIndexOf('.') > 0
+                && (!Files.exists(filePath) || Files.isRegularFile(filePath));
     }
 
     /**
