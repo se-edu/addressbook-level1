@@ -1,5 +1,7 @@
 package seedu.addressbook;
-/* ==============NOTE TO STUDENTS======================================
+
+/*
+ * NOTE : =============================================================
  * This class is written in a procedural fashion (i.e. not Object-Oriented)
  * Yes, it is possible to write non-OO code using an OO language.
  * ====================================================================
@@ -21,7 +23,8 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
 
-/* ==============NOTE TO STUDENTS======================================
+/*
+ * NOTE : =============================================================
  * This class header comment below is brief because details of how to
  * use this class are documented elsewhere.
  * ====================================================================
@@ -54,13 +57,13 @@ public class AddressBook {
     private static final String LS = System.lineSeparator() + LINE_PREFIX;
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : ==================================================================
      * These messages shown to the user are defined in one place for convenient
      * editing and proof reading. Such messages are considered part of the UI
      * and may be subjected to review by UI experts or technical writers. Note
      * that Some of the strings below include '%1$s' etc to mark the locations
      * at which java String.format(...) method can insert values.
-     * ====================================================================
+     * =========================================================================
      */
     private static final String MESSAGE_ADDED = "New person added: %1$s, Phone: %2$s, Email: %3$s";
     private static final String MESSAGE_ADDRESSBOOK_CLEARED = "Address book has been cleared!";
@@ -152,8 +155,6 @@ public class AddressBook {
      */
     private static final int DISPLAYED_INDEX_OFFSET = 1;
 
-
-
     /**
      * If the first non-whitespace character in a user's input line is this, that line will be ignored.
      */
@@ -166,8 +167,9 @@ public class AddressBook {
      * text file will be processed.
      */
     private static final Scanner SCANNER = new Scanner(System.in);
+
     /*
-     * ==============NOTE TO STUDENTS======================================================================
+     * NOTE : =============================================================================================
      * Note that the type of the variable below can also be declared as List<String[]>, as follows:
      *    private static final List<String[]> ALL_PERSONS = new ArrayList<>()
      * That is because List is an interface implemented by the ArrayList class.
@@ -175,11 +177,11 @@ public class AddressBook {
      * such as interface inheritance.
      * ====================================================================================================
      */
+
     /**
      * List of all persons in the address book.
      */
     private static final ArrayList<String[]> ALL_PERSONS = new ArrayList<>();
-
 
     /**
      * Stores the most recent list of persons shown to the user as a result of a user command.
@@ -194,12 +196,16 @@ public class AddressBook {
     private static String storageFilePath;
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : =============================================================
      * Notice how this method solves the whole problem at a very high level.
      * We can understand the high-level logic of the program by reading this
      * method alone.
+     * If the reader wants a deeper understanding of the solution, she can go
+     * to the next level of abstraction by reading the methods that are
+     * referenced by the high-level method below.
      * ====================================================================
      */
+
     public static void main(String[] args) {
         showWelcomeMessage();
         processProgramArgs(args);
@@ -213,12 +219,13 @@ public class AddressBook {
     }
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : =============================================================
      * The method header comment can be omitted if the method is trivial
      * and the header comment is going to be almost identical to the method
      * signature anyway.
      * ====================================================================
      */
+
     private static void showWelcomeMessage() {
         showToUser(DIVIDER, DIVIDER, VERSION, MESSAGE_WELCOME, DIVIDER);
     }
@@ -228,26 +235,19 @@ public class AddressBook {
     }
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : =============================================================
      * Parameter description can be omitted from the method header comment
      * if the parameter name is self-explanatory.
      * In the method below, '@param userInput' comment has been omitted.
      * ====================================================================
      */
+
     /**
      * Echoes the user input back to the user.
      */
     private static void echoUserCommand(String userCommand) {
         showToUser("[Command entered:" + userCommand + "]");
     }
-
-    /*
-     * ==============NOTE TO STUDENTS==========================================
-     * If the reader wants a deeper understanding of the solution, she can go
-     * to the next level of abstraction by reading the methods (given below)
-     * that is referenced by the method above.
-     * ====================================================================
-     */
 
     /**
      * Processes the program main method run arguments.
@@ -580,7 +580,7 @@ public class AddressBook {
     }
 
     /**
-     * Request to terminate the program.
+     * Requests to terminate the program.
      *
      * @return feedback display message for the operation result
      */
@@ -610,11 +610,13 @@ public class AddressBook {
         return inputLine;
     }
 
-   /* ==============NOTE TO STUDENTS======================================
+   /*
+    * NOTE : =============================================================
     * Note how the method below uses Java 'Varargs' feature so that the
     * method can accept a varying number of message parameters.
     * ====================================================================
     */
+
     /**
      * Shows a message to the user
      */
@@ -918,7 +920,7 @@ public class AddressBook {
     }
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : =============================================================
      * Note the use of Java's new 'Optional' feature to indicate that
      * the return value may not always be present.
      * ====================================================================
@@ -1052,12 +1054,13 @@ public class AddressBook {
     }
 
     /*
-     * ==============NOTE TO STUDENTS======================================
+     * NOTE : =============================================================
      * Note the use of 'regular expressions' in the method below.
      * Regular expressions can be very useful in checking if a a string
-     * follows a sepcific format.
+     * follows a specific format.
      * ====================================================================
      */
+
     /**
      * Validates string as a legal person name
      *
