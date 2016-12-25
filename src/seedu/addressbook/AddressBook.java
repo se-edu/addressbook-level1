@@ -544,7 +544,7 @@ public class AddressBook {
      * @return whether it is valid
      */
     private static boolean isDisplayIndexValidForLastPersonListingView(int index) {
-        return index >= DISPLAYED_INDEX_OFFSET && index < getLatestPersonListingView().size() + DISPLAYED_INDEX_OFFSET;
+        return index >= DISPLAYED_INDEX_OFFSET && index < latestPersonListingView.size() + DISPLAYED_INDEX_OFFSET;
     }
 
     /**
@@ -690,13 +690,6 @@ public class AddressBook {
      */
     private static String[] getPersonByLastVisibleIndex(int lastVisibleIndex) {
        return latestPersonListingView.get(lastVisibleIndex - DISPLAYED_INDEX_OFFSET);
-    }
-
-    /**
-     * @return unmodifiable list view of the last person listing view
-     */
-    private static ArrayList<String[]> getLatestPersonListingView() {
-        return latestPersonListingView;
     }
 
 
