@@ -467,7 +467,7 @@ public class AddressBook {
     }
 
     /**
-     * Extract keywords from the command arguments given for the find persons command.
+     * Extracts keywords from the command arguments given for the find persons command.
      *
      * @param findPersonCommandArgs full command args string for the find persons command
      * @return set of keywords as specified by args
@@ -477,7 +477,7 @@ public class AddressBook {
     }
 
     /**
-     * Retrieve all persons in the full model whose names contain some of the specified keywords.
+     * Retrieves all persons in the full model whose names contain some of the specified keywords.
      *
      * @param keywords for searching
      * @return list of persons in full model with name containing some of the keywords
@@ -581,8 +581,6 @@ public class AddressBook {
 
     /**
      * Requests to terminate the program.
-     *
-     * @return feedback display message for the operation result
      */
     private static void executeExitProgramRequest() {
         exitProgram();
@@ -765,8 +763,7 @@ public class AddressBook {
     }
 
     /**
-     * Saves all data to the file.
-     * Exits program if there is an error saving to file.
+     * Saves all data to the file. Exits program if there is an error saving to file.
      *
      * @param filePath file for saving
      */
@@ -823,7 +820,7 @@ public class AddressBook {
     }
 
     /**
-     * @return unmodifiable list view of all persons in the address book
+     * Returns all persons in the address book
      */
     private static ArrayList<String[]> getAllPersonsInAddressBook() {
         return ALL_PERSONS;
@@ -855,31 +852,34 @@ public class AddressBook {
      */
 
     /**
+     * Returns the given person's name
+     *
      * @param person whose name you want
-     * @return person's name
      */
     private static String getNameFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_NAME];
     }
 
     /**
+     * Returns given person's phone number
+     *
      * @param person whose phone number you want
-     * @return person's phone number
      */
     private static String getPhoneFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_PHONE];
     }
 
     /**
+     * Returns given person's email
+     *
      * @param person whose email you want
-     * @return person's email
      */
     private static String getEmailFromPerson(String[] person) {
         return person[PERSON_DATA_INDEX_EMAIL];
     }
 
     /**
-     * Create a person for use in the internal data.
+     * Creates a person from the given data.
      *
      * @param name of person
      * @param phone without data prefix
@@ -925,6 +925,7 @@ public class AddressBook {
      * the return value may not always be present.
      * ====================================================================
      */
+
     /**
      * Decodes a person from it's supposed string representation.
      *
@@ -947,7 +948,7 @@ public class AddressBook {
     }
 
     /**
-     * Decode persons from a list of string representations.
+     * Decodes persons from a list of string representations.
      *
      * @param encodedPersons strings to be decoded
      * @return if cannot decode any: empty Optional
@@ -966,11 +967,10 @@ public class AddressBook {
     }
 
     /**
-     * Checks whether person data (email, name, phone etc) can be extracted from the argument string.
+     * Returns true if person data (email, name, phone etc) can be extracted from the argument string.
      * Format is [name] p/[phone] e/[email], phone and email positions can be swapped.
      *
      * @param personData person string representation
-     * @return whether format of add command arguments allows parsing into individual arguments
      */
     private static boolean isPersonDataExtractableFrom(String personData) {
         final String matchAnyPersonDataPrefix = PERSON_DATA_PREFIX_PHONE + '|' + PERSON_DATA_PREFIX_EMAIL;
@@ -1042,10 +1042,9 @@ public class AddressBook {
     }
 
     /**
-     * Validates a person's data fields
+     * Returns true if the given person's data fields are valid
      *
      * @param person String array representing the person (used in internal data)
-     * @return whether the given person has valid data
      */
     private static boolean isPersonDataValid(String[] person) {
         return isPersonNameValid(person[PERSON_DATA_INDEX_NAME])
@@ -1062,10 +1061,9 @@ public class AddressBook {
      */
 
     /**
-     * Validates string as a legal person name
+     * Returns true if the given string as a legal person name
      *
      * @param name to be validated
-     * @return whether arg is a valid person name
      */
     private static boolean isPersonNameValid(String name) {
         return name.matches("(\\w|\\s)+");  // name is nonempty mixture of alphabets and whitespace
@@ -1073,10 +1071,9 @@ public class AddressBook {
     }
 
     /**
-     * Validates string as a legal person phone number
+     * Returns true if the given string as a legal person phone number
      *
      * @param phone to be validated
-     * @return whether arg is a valid person phone number
      */
     private static boolean isPersonPhoneValid(String phone) {
         return phone.matches("\\d+");    // phone nonempty sequence of digits
@@ -1084,7 +1081,7 @@ public class AddressBook {
     }
 
     /**
-     * Validates string as a legal person email
+     * Returns true if the given string is a legal person email
      *
      * @param email to be validated
      * @return whether arg is a valid person email
@@ -1101,9 +1098,7 @@ public class AddressBook {
      * ===============================================
      */
 
-    /**
-     * @return  Usage info for all commands
-     */
+    /** Returns usage info for all commands */
     private static String getUsageInfoForAllCommands() {
         return getUsageInfoForAddCommand() + LS
                 + getUsageInfoForFindCommand() + LS
@@ -1114,74 +1109,46 @@ public class AddressBook {
                 + getUsageInfoForHelpCommand();
     }
 
-    /**
-     * Builds string for showing 'add' command usage instruction
-     *
-     * @return  'add' command usage instruction
-     */
+    /** Returns the string for showing 'add' command usage instruction */
     private static String getUsageInfoForAddCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_ADD_WORD, COMMAND_ADD_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_PARAMETERS, COMMAND_ADD_PARAMETERS) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_ADD_EXAMPLE) + LS;
     }
 
-    /**
-     * Builds string for showing 'find' command usage instruction
-     *
-     * @return  'find' command usage instruction
-     */
+    /** Returns the string for showing 'find' command usage instruction */
     private static String getUsageInfoForFindCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_FIND_WORD, COMMAND_FIND_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_PARAMETERS, COMMAND_FIND_PARAMETERS) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_FIND_EXAMPLE) + LS;
     }
 
-    /**
-     * Builds string for showing 'delete' command usage instruction
-     *
-     * @return  'delete' command usage instruction
-     */
+    /** Returns the string for showing 'delete' command usage instruction */
     private static String getUsageInfoForDeleteCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_DELETE_WORD, COMMAND_DELETE_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_PARAMETERS, COMMAND_DELETE_PARAMETER) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_DELETE_EXAMPLE) + LS;
     }
 
-    /**
-     * Builds string for showing 'clear' command usage instruction
-     *
-     * @return  'clear' command usage instruction
-     */
+    /** Returns string for showing 'clear' command usage instruction */
     private static String getUsageInfoForClearCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_CLEAR_WORD, COMMAND_CLEAR_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_CLEAR_EXAMPLE) + LS;
     }
 
-    /**
-     * Builds string for showing 'view' command usage instruction
-     *
-     * @return  'view' command usage instruction
-     */
+    /** Returns the string for showing 'view' command usage instruction */
     private static String getUsageInfoForViewCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_LIST_WORD, COMMAND_LIST_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_LIST_EXAMPLE) + LS;
     }
 
-    /**
-     * Builds string for showing 'help' command usage instruction
-     *
-     * @return  'help' command usage instruction
-     */
+    /** Returns string for showing 'help' command usage instruction */
     private static String getUsageInfoForHelpCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_HELP_WORD, COMMAND_HELP_DESC)
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_HELP_EXAMPLE);
     }
 
-    /**
-     * Builds string for showing 'exit' command usage instruction
-     *
-     * @return  'exit' command usage instruction
-     */
+    /** Returns the string for showing 'exit' command usage instruction */
     private static String getUsageInfoForExitCommand() {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_EXIT_WORD, COMMAND_EXIT_DESC)
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_EXIT_EXAMPLE);
@@ -1200,7 +1167,7 @@ public class AddressBook {
      * @param s  Parameter as a string
      * @param sign  Parameter sign to be removed
      *
-     * @return  Priority string without p/
+     * @return  string without the sign
      */
     private static String removePrefixSign(String s, String sign) {
         return s.replace(sign, "");
