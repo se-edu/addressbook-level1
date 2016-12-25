@@ -308,7 +308,7 @@ public class AddressBook {
 
     /**
      * Returns true if the given file path is valid.
-     * A file path is valid if it has a valid parent directory as determined by {@link #hasValidFolder}
+     * A file path is valid if it has a valid parent directory as determined by {@link #hasValidParentDirectory}
      * and a valid file name as determined by {@link #hasValidFileName}.
      */
     private static boolean isValidFilePath(String filePath) {
