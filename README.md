@@ -13,6 +13,7 @@
     * [List of commands](#list-of-commands)
 * [**Developer Guide**](#developer-guide)
     * [Setting Up](#setting-up)
+    * [Design](#design)
     * [Testing](#testing)
 * [**Learning Outcomes**](#learning-outcomes)
     1. [Set up a project in an IDE [`LO-IdeSetup`]](#set-up-a-project-in-an-ide-lo-idesetup)
@@ -152,6 +153,20 @@ Example:
 3. Click `General` > `Existing Projects into Workspace` > `Next`
 4. Click `Browse`, then locate the project's directory
 5. Click `Finish`
+
+## Design
+
+AddressBook saves data in a plain text file, one line for each person, in the format `NAME p/PHONE e/EMAIL`.
+Here is an example:
+
+```
+John Doe p/98765432 e/johnd@gmail.com
+Jane Doe p/12346758 e/jane@gmail.com
+```
+
+All person data are loaded to memory at start up and written to the file after any command that mutates data.
+In-memory data are held in a `ArrayList<String[]>` where each `String[]` object represents a person.
+
 
 ## Testing
 
