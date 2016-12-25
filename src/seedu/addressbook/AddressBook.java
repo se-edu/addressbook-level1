@@ -1148,7 +1148,6 @@ public class AddressBook {
      *
      * @param s  Parameter as a string
      * @param sign  Parameter sign to be removed
-     *
      * @return  string without the sign
      */
     private static String removePrefixSign(String s, String sign) {

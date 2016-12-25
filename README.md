@@ -26,6 +26,7 @@
     * [Apply coding best practices](#apply-coding-best-practices-lo-codingbestpractices)
     * [Refactor code](#refactor-code-lo-refactor)
     * [Abstract methods well](#abstract-methods-well-lo-methodabstraction)
+    * [Follow SLAP](#follow-slap-lo-slap)
     * [Work in a 1kLoC code base](#work-in-a-1kloc-code-baselo-1kloc)
 * [Contributors](#contributors)
 * [Contact Us](#contact-us)
@@ -320,8 +321,57 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
 * Remember to run the test script after each refactoring to prevent [regressions](https://en.wikipedia.org/wiki/Software_regression).
 
 ## Abstract methods well `[LO-MethodAbstraction]`
+Notice how most of the methods in `AddressBook` are short and focused (does only one thing and does it well).
 
-Notice how most of the methods in `AddressBook` are short, focused, and written at a single
+**Case 1**. Consider the following three lines in the `main` method.
+
+```java
+    String userCommand = getUserInput();
+    echoUserCommand(userCommand);
+    String feedback = executeCommand(userCommand);
+```
+
+If we include the code of `echoUserCommand(String)` method inside the `getUserInput()`
+(resulting in the code given below), the behavior of AddressBook remains as before.
+However, that is a not a good approach because now the `getUserInput()` is doing two distinct things.
+A well-abstracted method should do only one thing.
+
+```java
+    String userCommand = getUserInput(); //also echos the command back to the user
+    String feedback = executeCommand(userCommand);
+```
+
+**Case 2**. Consider the method `removePrefixSign(String s, String sign)`.
+While it is short, there are some problems with how it has been abstracted.
+
+1. It contains the term `sign` which is not a term used by the AddressBook vocabulary.
+   A method adds a new term to the vocabulary used to express the solution.
+   Therefore, it is not good when a method name contains terms that are not strictly necessary to express the
+   solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
+   (e.g. it does not go well with the other terms already used).
+2. Its implementation is not doing exactly what is advertised by the method name and the header comment.
+   For example, the code does not remove only prefixes; it removes `sign` from anywhere in the `s`.
+3. The method can be _more general_ and _more independent_ from the rest of the code. For example,
+   the method below can do the same job, but is more general (works for any string, not just parameters)
+   and is more independent from the rest of the code (not specific to AddressBook)
+
+   ```java
+   /**
+    * Removes prefix from the given fullString if prefix occurs at the start of the string.
+    */
+    private static String removePrefix(String fullString, String prefix) { ... }
+   ```
+   If needed, a more AddressBook-specific method that works on parameter strings only can be defined.
+   In that case, that method can make use of the more general method suggested above.
+
+##### Exercise: Improve abstraction of method
+
+Refactor the method `removePrefixSign` as suggested above.
+
+
+## Follow SLAP `[LO-SLAP]`
+
+Notice how most of the methods in `AddressBook` are written at a single
 level of abstraction (_cf_ [SLAP](http://programmers.stackexchange.com/questions/110933/how-to-determine-the-levels-of-abstraction))
 
 Here is an example.
