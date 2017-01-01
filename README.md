@@ -57,7 +57,7 @@ Please refer to the [Setting up](#setting-up) section to learn how to set up the
 5. Now you can interact with the program through the CLI
 
 ## List of commands
-#### Viewing help : `help`
+#### Viewing help: `help`
 Format: `help` 
  > Help is also shown if you enter an incorrect command e.g. `abcd`
  
@@ -72,7 +72,7 @@ Examples:
 * `add John Doe p/98765432 e/johnd@gmail.com`
 * `add Betsy Crowe e/bencrowe@gmail.com p/1234567 `
 
-#### Listing all persons : `list`
+#### Listing all persons: `list`
 
 > Shows a list of persons, as an indexed list, in the order they were added to the address book, 
 oldest first.
@@ -93,7 +93,7 @@ Examples:
 * `find Betsy Tim John`
   > Returns Any person having names `Betsy`, `Tim`, or `John`
 
-#### Deleting a person : `delete`
+#### Deleting a person: `delete`
 
 Format: `delete INDEX`  
 > Deletes the person at the specified `INDEX`. 
@@ -108,11 +108,11 @@ Examples:
   `delete 1`
   > Deletes the 1st person in the results of the `find` command.
 
-#### Clearing all entries : `clear`
+#### Clearing all entries: `clear`
 > Clears all entries from the address book.  
 Format: `clear`  
 
-#### Exiting the program : `exit`
+#### Exiting the program: `exit`
 Format: `exit`  
 
 #### Saving the data 
@@ -454,13 +454,13 @@ Some suggested enhancements:
 -----------------------------------------------------------------------------------------------------
 # Contributors
 
-* [Jeffry Hartanto](http://github.com/jeffryhartanto) : Created a ToDo app that was used as the basis for this code.
-* [Leow Yijin](http://github.com/yijinl) : Main developer for the first version of the AddressBook-level1
-* [Damith C. Rajapakse](http://www.comp.nus.edu.sg/~damithch) : Project Advisor
+* [Jeffry Hartanto](http://github.com/jeffryhartanto): Created a ToDo app that was used as the basis for this code.
+* [Leow Yijin](http://github.com/yijinl): Main developer for the first version of the AddressBook-level1
+* [Damith C. Rajapakse](http://www.comp.nus.edu.sg/~damithch): Project Advisor
 
 -----------------------------------------------------------------------------------------------------
 # Contact Us
 
-* **Bug reports, Suggestions** : Post in our [issue tracker](https://github.com/se-edu/addressbook-level1/issues)
+* **Bug reports, Suggestions**: Post in our [issue tracker](https://github.com/se-edu/addressbook-level1/issues)
   if you noticed bugs or have suggestions on how to improve.
-* **Contributing** : We welcome pull requests. Follow the process described [here](https://github.com/oss-generic/process)
+* **Contributing**: We welcome pull requests. Follow the process described [here](https://github.com/oss-generic/process)
