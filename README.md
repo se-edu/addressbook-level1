@@ -202,7 +202,7 @@ corresponding exercises.
 
 ## Set up a project in an IDE `[LO-IdeSetup]`
 
-##### Exercise: Setup project in Eclipse 
+#### Exercise: Setup project in Eclipse 
 
 * Learn [how to set up a new project in Eclipse]
   (https://se-edu.github.io/addressbook-level1/doc/Getting started with Eclipse.pptx). <br>
@@ -220,7 +220,7 @@ The `AddressBook.java` code is rather long, which makes it cumbersome to navigat
 Navigating code using IDE shortcuts is a more efficient option. 
 For example, <kbd>F3</kbd> will navigate to the definition of the method/field at the cursor.
  
-##### Exercise: Learn to navigate code using shortcuts
+#### Exercise: Learn to navigate code using shortcuts
 
 Learn some Eclipse code navigation shortcuts 
 (you can use Web resources like [this one](https://www.shortcutworld.com/en/win/Eclipse.html)). 
@@ -235,7 +235,7 @@ For example, learn the shortcuts to,
 
 ## Use a debugger `[LO-Debugging]`
 
-##### Exercise: Learn to step through code using the debugger
+#### Exercise: Learn to step through code using the debugger
 
 Prerequisite: `[LO-IdeSetup]`
 
@@ -253,7 +253,7 @@ Here are some things you can do in your demonstration:
 
 ## Automate CLI testing `[LO-AutomatedCliTesting]`
 
-##### Exercise: Practice automated CLI testing
+#### Exercise: Practice automated CLI testing
 
 * Run the tests as explained in the [Testing](#testing) section.
 * Examine the test script to understand how the script works.
@@ -268,7 +268,7 @@ to store a list of `String` or `String[]` objects.
 
 Resources: [ArrayList class tutorial (from javaTpoint.com)](http://www.javatpoint.com/ArrayList-in-collection-framework)
 
-##### Exercise: Use `HashMap`
+#### Exercise: Use `HashMap`
 
 Currently, a person's details are stored as a `String[]`. Modify the code to use a `HashMap<String, String>` instead.
 A sample code snippet is given below.
@@ -287,7 +287,7 @@ Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/
 
 ## Use Enums `[LO-Enums]`
 
-##### Exercise: Use `HashMap` + `Enum`
+#### Exercise: Use `HashMap` + `Enum`
 
 Similar to the exercise in the `LO-Collections` section, but also bring in Java `enum` feature.
 
@@ -305,7 +305,7 @@ john.put(PersonProperty.EMAIL, "john.doe@email.com");
 Note how the `showToUser` method uses
 [Java Varargs feature](http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html) .
 
-##### Exercise: Use Varargs
+#### Exercise: Use Varargs
 
 Modify the code to remove the use of the Varargs feature.
 Compare the code with and without the varargs feature.
@@ -396,7 +396,7 @@ While it is short, there are some problems with how it has been abstracted.
    If needed, a more AddressBook-specific method that works on parameter strings only can be defined.
    In that case, that method can make use of the more general method suggested above.
 
-##### Exercise: Improve abstraction of method
+#### Exercise: Improve abstraction of method
 
 Refactor the method `removePrefixSign` as suggested above.
 
@@ -422,13 +422,13 @@ Here is an example:
     }
 ```
 
-##### Exercise 1: Reduce SLAP of method
+#### Exercise 1: Reduce SLAP of method
 
 In the `main` method, replace the `processProgramArgs(args)` call with the actual code of that method.
 The `main` method no longer has SLAP. Notice how mixing low level code with high level code reduces
 readability.
 
-##### Exercise 2: Refactor the code to make it worse!
+#### Exercise 2: Refactor the code to make it worse!
 
 Sometimes, going in the wrong direction can be a good learning experience too. 
 In this exercise, we explore how low code qualities can go.
