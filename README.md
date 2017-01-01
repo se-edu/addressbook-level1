@@ -190,55 +190,60 @@ In-memory data are held in a `ArrayList<String[]>` where each `String[]` object 
   Solution: You can use a diff/merge tool with a GUI e.g. WinMerge (on Windows)
 * Problem: The two files look exactly the same, but the test script reports they are different.<br>
   Solution: This can happen because the line endings used by Windows is different from Unix-based
-  OSes. Convert the actual.txt to the format used by your OS using some [utility](https://kb.iu.edu/d/acux).
+  OSes. Convert the `actual.txt` to the format used by your OS using some [utility](https://kb.iu.edu/d/acux).
 * Problem: Test fails during the very first time.<br>
   Solution: The output of the very first test run could be slightly different because the program
   creates a new storage file. Tests should pass from the 2nd run onwards.
 
 -----------------------------------------------------------------------------------------------------
 # Learning Outcomes
-Here are the things you should be able to do after studying this code and completing the
+_Learning Outcomes_ are the things you should be able to do after studying this code and completing the
 corresponding exercises.
 
 ## Set up a project in an IDE `[LO-IdeSetup]`
 
 ##### Exercise: Setup project in Eclipse 
+
 * Learn [how to set up a new project in Eclipse]
   (https://se-edu.github.io/addressbook-level1/doc/Getting started with Eclipse.pptx). <br>
   Create a new project in Eclipse and write a small HelloWorld program.
-* Download the source code for this project, using one of the following options:
-   1. Go to the 'Releases' tab, download the `src.zip` from the latest release, and unzip content.
-   2. Clone this repo (if you know how to use Git) to your Computer.
+* Download the source code for this project: Click on the `clone or download` link above and either,
+   1. download as a zip file and unzip content.
+   2. clone the repo (if you know how to use Git) to your Computer.
 * [Set up](#setting-up) the project in Eclipse.
 * [Run the program](#starting-the-program) from within Eclipse, and try the features described in
   the [User guide](#user-guide) section
 
 ## Navigate code efficiently `[LO-CodeNavigation]`
-The `AddressBook.java` code is rather, which makes it cumbersome to navigate by scrolling alone. 
+
+The `AddressBook.java` code is rather long, which makes it cumbersome to navigate by scrolling alone. 
 Navigating code using IDE shortcuts is a more efficient option. 
 For example, <kbd>F3</kbd> will navigate to the definition of the method/field at the cursor.
  
 ##### Exercise: Learn to navigate code using shortcuts
+
 Learn some Eclipse code navigation shortcuts 
 (you can use Web resources like [this one](https://www.shortcutworld.com/en/win/Eclipse.html)). 
 For example, learn the shortcuts to,
-  * go to the definition of a method
-  * go back to the previous location
+
+  * go to the definition of a method.
+  * go back to the previous location.
   * view the documentation of a method from where the method is being used, 
-    without navigating to the method itself
-  * find where a method/field is being used
+    without navigating to the method itself.
+  * find where a method/field is being used.
   * ...
 
 ## Use a debugger `[LO-Debugging]`
 
 ##### Exercise: Learn to step through code using the debugger
+
 Prerequisite: `[LO-IdeSetup]`
 
 Learn Eclipse debugging features from [these slides](https://se-edu.github.io/addressbook-level1/doc/Debugging with Eclipse.pptx)
 or other online resources.<br>
 Demonstrate your debugging skills using the AddressBook code. 
 
-Here are some things you can do in your demonstration.
+Here are some things you can do in your demonstration:
 
 1. Set a 'break point'
 2. Run the program in debug mode
@@ -267,6 +272,7 @@ Resources: [ArrayList class tutorial (from javaTpoint.com)](http://www.javatpoin
 
 Currently, a person's details are stored as a `String[]`. Modify the code to use a `HashMap<String, String>` instead.
 A sample code snippet is given below.
+
 ```java
 private static final String PERSON_PROPERTY_NAME = "name";
 private static final String PERSON_PROPERTY_EMAIL = "email";
@@ -276,6 +282,7 @@ john.put(PERSON_PROPERTY_NAME, "John Doe");
 john.put(PERSON_PROPERTY_EMAIL, "john.doe@email.com");
 //etc.
 ```
+
 Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/2013/12/hashmap-in-java-with-example/)
 
 ## Use Enums `[LO-Enums]`
@@ -283,6 +290,7 @@ Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/
 ##### Exercise: Use `HashMap` + `Enum`
 
 Similar to the exercise in the `LO-Collections` section, but also bring in Java `enum` feature.
+
 ```java
 private enum PersonProperty  {NAME, EMAIL, PHONE};
 ...
@@ -298,6 +306,7 @@ Note how the `showToUser` method uses
 [Java Varargs feature](http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html) .
 
 ##### Exercise: Use Varargs
+
 Modify the code to remove the use of the Varargs feature.
 Compare the code with and without the varargs feature.
 
@@ -309,6 +318,7 @@ for the most part.
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
 
 ## Apply coding best practices `[LO-CodingBestPractices]`
+
 Most of the given code follows the best practices mentioned
 [in this document](doc/CodeQualityBestPractices.md).
 
@@ -317,17 +327,20 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 ## Refactor code `[LO-Refactor]`
 
 **Resources**:
+
 * [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
 * [Screencast] [A short refactoring demo using Eclipse](http://www.youtube.com/watch?v=7KDruqCzdpc)
 
 #### Exercise: Refactor the code to make it better
+
 Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `[LO-CodingBestPractices]`
+
 * Improve the code in the following ways,
   * Fix [coding standard](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/coding-standards-java.html) 
     violations.
   * Fix violations of the best practices given in [in this document](doc/CodeQualityBestPractices.md).
   * Any other change that you think will improve the quality of the code.
-* Try to do the modification as a combination of standard refactorings given in this
+* Try to do the modifications as a combination of standard refactorings given in this
   [catalog](http://refactoring.com/catalog/)
 * As far as possible, use automated refactoring features in Eclipse.
 * If you know how to use Git, commit code after each refactoring.<br>
@@ -336,6 +349,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
 * Remember to run the test script after each refactoring to prevent [regressions](https://en.wikipedia.org/wiki/Software_regression).
 
 ## Abstract methods well `[LO-MethodAbstraction]`
+
 Notice how most of the methods in `AddressBook` are short and focused (does only one thing and does it well).
 
 **Case 1**. Consider the following three lines in the `main` method.
@@ -360,10 +374,12 @@ A well-abstracted method should do only one thing.
 While it is short, there are some problems with how it has been abstracted.
 
 1. It contains the term `sign` which is not a term used by the AddressBook vocabulary.
-   A method adds a new term to the vocabulary used to express the solution.
-   Therefore, it is not good when a method name contains terms that are not strictly necessary to express the
-   solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
-   (e.g. it does not go well with the other terms already used).
+   
+   > **A method adds a new term to the vocabulary used to express the solution**.
+   > Therefore, it is not good when a method name contains terms that are not strictly necessary to express the
+   > solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
+   > (e.g. it does not go well with the other terms already used).
+   
 2. Its implementation is not doing exactly what is advertised by the method name and the header comment.
    For example, the code does not remove only prefixes; it removes `sign` from anywhere in the `s`.
 3. The method can be _more general_ and _more independent_ from the rest of the code. For example,
@@ -376,6 +392,7 @@ While it is short, there are some problems with how it has been abstracted.
     */
     private static String removePrefix(String fullString, String prefix) { ... }
    ```
+   
    If needed, a more AddressBook-specific method that works on parameter strings only can be defined.
    In that case, that method can make use of the more general method suggested above.
 
@@ -389,7 +406,8 @@ Refactor the method `removePrefixSign` as suggested above.
 Notice how most of the methods in `AddressBook` are written at a single
 level of abstraction (_cf_ [SLAP](http://programmers.stackexchange.com/questions/110933/how-to-determine-the-levels-of-abstraction))
 
-Here is an example.
+Here is an example:
+
 ```java
     public static void main(String[] args) {
         showWelcomeMessage();
@@ -405,13 +423,16 @@ Here is an example.
 ```
 
 ##### Exercise 1: Reduce SLAP of method
+
 In the `main` method, replace the `processProgramArgs(args)` call with the actual code of that method.
 The `main` method no longer has SLAP. Notice how mixing low level code with high level code reduces
 readability.
 
 ##### Exercise 2: Refactor the code to make it worse!
+
 Sometimes, going in the wrong direction can be a good learning experience too. 
 In this exercise, we explore how low code qualities can go.
+
 * Refactor the code to make the code as bad as possible.<br>
   i.e. How bad can you make it without breaking the functionality while still making it look like it was written by a 
   programmer (but a very bad programmer :-)).
@@ -420,6 +441,7 @@ In this exercise, we explore how low code qualities can go.
 ## Work in a 1kLoC code base`[LO-1KLoC]`
 
 #### Exercise: Enhance the code
+
 Enhance the AddressBook to prove that you can work in a codebase of 1KLoC. <br>
 Remember to change code in small steps, update/run tests after each change, and commit after each significant change.
 
