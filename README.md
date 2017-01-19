@@ -312,7 +312,7 @@ Compare the code with and without the varargs feature.
 
 ## Follow a coding standard `[LO-CodingStandard]`
 
-The given code follows the [coding standard](https://oss-generic.github.io/process/codingstandards/coding-standards-java.html) 
+The given code follows the [coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) 
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
@@ -336,7 +336,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `[LO-CodingBestPractices]`
 
 * Improve the code in the following ways,
-  * Fix [coding standard](http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/coding-standards-java.html) 
+  * Fix [coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) 
     violations.
   * Fix violations of the best practices given in [in this document](doc/CodeQualityBestPractices.md).
   * Any other change that you think will improve the quality of the code.
