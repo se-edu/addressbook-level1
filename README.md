@@ -450,6 +450,7 @@ Some suggested enhancements:
 * Make the `find` command case insensitive e.g. `find john` should match `John`
 * Add a `sort` command that can list the persons in alphabetical order
 * Add an `edit` command that can edit properties of a specific person
+* Add an additional field (like date of birth) to the person record
 
 -----------------------------------------------------------------------------------------------------
 # Contributors
