@@ -40,19 +40,20 @@ Please refer to the [Setting up](#setting-up) section to learn how to set up the
 
 ## Starting the program
 
-**Using Eclipse**
+**Using IntelliJ**
 
-1. Find the project in the `Project Explorer` or `Package Explorer` (usually located at the left side)
-2. Right click on the project
-3. Click `Run As` > `Java Application`
+1. Find the project in the `Project Explorer` (usually located at the left side)
+   1. If the `Project Explorer` is not visible, press <kbd>ALT</kbd>+<kbd>1</kbd> for Windows/Linux, <kbd>CMD</kbd>+<kbd>1</kbd> for macOS to open the `Project Explorer` tab
+2. Go to the `src` folder and locate the `AddressBook` file
+3. Right click the file and select `Run AddressBook.main()`
 4. The program now should run on the `Console` (usually located at the bottom side)
 5. Now you can interact with the program through the `Console`
 
 **Using Command Line**
 
-1. 'Build' the project using Eclipse
+1. 'Build' the project using IntelliJ
 2. Open the `Terminal`/`Command Prompt`
-3. `cd` into the project's `bin` directory
+3. `cd` into the project's `out\production\addressbook-level1` directory
 4. Type `java seedu.addressbook.AddressBook`, then <kbd>Enter</kbd> to execute
 5. Now you can interact with the program through the CLI
 
@@ -133,7 +134,7 @@ Example:
   Parent directory is valid if it exists.<br>
   Note for non-Windows users: if the file already exists, it must be a 'regular' file.<br>
 
-> When running the program inside Eclipse, there is a way to set command line parameters
+> When running the program inside IntelliJ, there is a way to set command line parameters
   before running the program.
 
 -----------------------------------------------------------------------------------------------------
@@ -144,15 +145,20 @@ Example:
 **Prerequisites**
 
 * JDK 8 or later 
-* Eclipse IDE
+* IntelliJ IDE
 
-**Importing the project into Eclipse**
+**Importing the project into IntelliJ**
 
-1. Open Eclipse
-2. Click `File` > `Import`
-3. Click `General` > `Existing Projects into Workspace` > `Next`
-4. Click `Browse`, then locate the project's directory
-5. Click `Finish`
+1. Open IntelliJ (if you are not in the welcome screen, click `File` > `Close Project` to close the existing project dialog first)
+2. Set up the correct JDK version
+   1. Click `Configure` > `Project Defaults` > `Project Structure`
+   2. Click `New...` and find the directory of the JDK
+3. Click `Import Project`
+4. Locate the project directory and click `OK`
+5. Select `Create project from existing sources` and click `Next`
+6. Rename the project if you want. Click `Next`
+7. Ensure that your src folder is checked. Keep clicking `Next`
+8. Click `Finish`
 
 ## Design
 
@@ -202,28 +208,26 @@ corresponding exercises.
 
 ## Set up a project in an IDE `[LO-IdeSetup]`
 
-#### Exercise: Setup project in Eclipse 
+#### Exercise: Setup project in IntelliJ 
 
-* Learn [how to set up a new project in Eclipse]
-  (https://se-edu.github.io/addressbook-level1/doc/Getting started with Eclipse.pptx). <br>
-  Create a new project in Eclipse and write a small HelloWorld program.
+* Learn [how to set up a new project in IntelliJ (from jetbrains.com)](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html). <br>
+  Create a new project in IntelliJ and write a small HelloWorld program.
 * Download the source code for this project: Click on the `clone or download` link above and either,
    1. download as a zip file and unzip content.
    2. clone the repo (if you know how to use Git) to your Computer.
-* [Set up](#setting-up) the project in Eclipse.
-* [Run the program](#starting-the-program) from within Eclipse, and try the features described in
-  the [User guide](#user-guide) section
+* [Set up](#setting-up) the project in IntelliJ.
+* [Run the program](#starting-the-program) from within IntelliJ, and try the features described in
+  the [User guide](#user-guide) section.
 
 ## Navigate code efficiently `[LO-CodeNavigation]`
 
 The `AddressBook.java` code is rather long, which makes it cumbersome to navigate by scrolling alone. 
 Navigating code using IDE shortcuts is a more efficient option. 
-For example, <kbd>F3</kbd> will navigate to the definition of the method/field at the cursor.
+For example, <kbd>CTRL</kbd>+<kbd>B</kbd> will navigate to the definition of the method/field at the cursor.
  
 #### Exercise: Learn to navigate code using shortcuts
 
-Learn some Eclipse code navigation shortcuts 
-(you can use Web resources like [this one](https://www.shortcutworld.com/en/win/Eclipse.html)). 
+Learn some IntelliJ code navigation shortcuts.
 For example, learn the shortcuts to,
 
   * go to the definition of a method.
@@ -239,8 +243,6 @@ For example, learn the shortcuts to,
 
 Prerequisite: `[LO-IdeSetup]`
 
-Learn Eclipse debugging features from [these slides](https://se-edu.github.io/addressbook-level1/doc/Debugging with Eclipse.pptx)
-or other online resources.<br>
 Demonstrate your debugging skills using the AddressBook code. 
 
 Here are some things you can do in your demonstration:
@@ -250,6 +252,8 @@ Here are some things you can do in your demonstration:
 3. 'Step through' a few lines of code while examining variable values
 4. 'Step into', and 'step out of', methods as you step through the code
 5. ...
+
+Resources: [Debugger Basics (from jetbrains.com)](https://www.jetbrains.com/help/idea/debugger-basics.html)
 
 ## Automate CLI testing `[LO-AutomatedCliTesting]`
 
@@ -329,7 +333,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 **Resources**:
 
 * [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
-* [Screencast] [A short refactoring demo using Eclipse](http://www.youtube.com/watch?v=7KDruqCzdpc)
+* [Refactoring shortcuts in IntelliJ](https://www.jetbrains.com/help/idea/refactoring-source-code.html) - from https://www.jetbrains.com/help/idea/refactoring-source-code.html
 
 #### Exercise: Refactor the code to make it better
 
@@ -342,7 +346,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
   * Any other change that you think will improve the quality of the code.
 * Try to do the modifications as a combination of standard refactorings given in this
   [catalog](http://refactoring.com/catalog/)
-* As far as possible, use automated refactoring features in Eclipse.
+* As far as possible, use automated refactoring features in IntelliJ.
 * If you know how to use Git, commit code after each refactoring.<br>
   In the commit message, mention which refactoring you applied.<br>
   Example commit messages: `Extract variable isValidPerson`, `Inline method isValidPerson()`
