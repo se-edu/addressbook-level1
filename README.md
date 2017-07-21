@@ -459,13 +459,12 @@ Some suggested enhancements:
 -----------------------------------------------------------------------------------------------------
 # Contributors
 
-* [Jeffry Hartanto](http://github.com/jeffryhartanto): Created a ToDo app that was used as the basis for this code.
-* [Leow Yijin](http://github.com/yijinl): Main developer for the first version of the AddressBook-level1
-* [Damith C. Rajapakse](http://www.comp.nus.edu.sg/~damithch): Project Advisor
+The full list of contributors for se-edu can be found [here](https://se-edu.github.io/docs/Team.html).
 
 -----------------------------------------------------------------------------------------------------
 # Contact Us
 
 * **Bug reports, Suggestions**: Post in our [issue tracker](https://github.com/se-edu/addressbook-level1/issues)
   if you noticed bugs or have suggestions on how to improve.
-* **Contributing**: We welcome pull requests. Follow the process described [here](https://github.com/oss-generic/process)
+* **Contributing**: We welcome pull requests. Refer to our website [here](https://se-edu.github.io/#contributing).
+* If you would like to contact us, refer to [our website](https://se-edu.github.io/#contact).
