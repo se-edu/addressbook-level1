@@ -208,10 +208,14 @@ corresponding exercises.
 
 ## Set up a project in an IDE `[LO-IdeSetup]`
 
+* Learn [how to set up a project in IntelliJ](https://se-edu.github.io/se-book/intellij/projectSetup/).
+
 #### Exercise: Setup project in IntelliJ 
 
-* Learn [how to set up a new project in IntelliJ (from jetbrains.com)](https://www.jetbrains.com/help/idea/creating-running-and-packaging-your-first-java-application.html). <br>
-  Create a new project in IntelliJ and write a small HelloWorld program.
+Part A:
+* Create a new project in IntelliJ and write a small HelloWorld program.
+
+Part B:
 * Download the source code for this project: Click on the `clone or download` link above and either,
    1. download as a zip file and unzip content.
    2. clone the repo (if you know how to use Git) to your Computer.
@@ -225,17 +229,11 @@ The `AddressBook.java` code is rather long, which makes it cumbersome to navigat
 Navigating code using IDE shortcuts is a more efficient option. 
 For example, <kbd>CTRL</kbd>+<kbd>B</kbd> will navigate to the definition of the method/field at the cursor.
  
+Learn [basic IntelliJ code navigation features](https://se-edu.github.io/se-book/intellij/codeNavigation/).
+
 #### Exercise: Learn to navigate code using shortcuts
 
-Learn some IntelliJ code navigation shortcuts.
-For example, learn the shortcuts to,
-
-  * go to the definition of a method.
-  * go back to the previous location.
-  * view the documentation of a method from where the method is being used, 
-    without navigating to the method itself.
-  * find where a method/field is being used.
-  * ...
+* Use Intellij basic code navigation features to navigate code of this project.
 
 ## Use a debugger `[LO-Debugging]`
 
@@ -257,6 +255,8 @@ Resources: [Debugger Basics (from jetbrains.com)](https://www.jetbrains.com/help
 
 ## Automate CLI testing `[LO-AutomatedCliTesting]`
 
+Learn [how to automate testing of CLIs](https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/).
+
 #### Exercise: Practice automated CLI testing
 
 * Run the tests as explained in the [Testing](#testing) section.
@@ -267,10 +267,10 @@ Resources: [Debugger Basics (from jetbrains.com)](https://www.jetbrains.com/help
 
 ## Use Collections `[LO-Collections]`
 
-Note how the `AddressBook` class uses `ArrayList<>` class (from the Java `Collections` library)
-to store a list of `String` or `String[]` objects.
+Note how the `AddressBook` class uses `ArrayList<>` class (from the Java `Collections` library) to store a list of `String` or `String[]` objects.
 
-Resources: [ArrayList class tutorial (from javaTpoint.com)](http://www.javatpoint.com/ArrayList-in-collection-framework)
+Learn [how to use some Java `Collections` classes, such as `ArrayList` and `HashMap`](https://se-edu.github.io/se-book/javaTools/collections/)
+
 
 #### Exercise: Use `HashMap`
 
@@ -286,8 +286,6 @@ john.put(PERSON_PROPERTY_NAME, "John Doe");
 john.put(PERSON_PROPERTY_EMAIL, "john.doe@email.com");
 //etc.
 ```
-
-Resources: [HashMap tutorial (from beginnersbook.com)](http://beginnersbook.com/2013/12/hashmap-in-java-with-example/)
 
 ## Use Enums `[LO-Enums]`
 
@@ -306,8 +304,7 @@ john.put(PersonProperty.EMAIL, "john.doe@email.com");
 
 ## Use Varargs `[LO-Varargs]`
 
-Note how the `showToUser` method uses
-[Java Varargs feature](http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html) .
+Note how the `showToUser` method uses [Java Varargs feature](https://se-edu.github.io/se-book/javaTools/varargs/).
 
 #### Exercise: Use Varargs
 
