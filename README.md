@@ -51,9 +51,9 @@ Please refer to the [Setting up](#setting-up) section to learn how to set up the
 
 **Using Command Line**
 
-1. 'Build' the project using IntelliJ
-2. Open the `Terminal`/`Command Prompt`
-3. `cd` into the project's `out\production\addressbook-level1` directory
+1. 'Build' the project using IntelliJ (`Build` -> `Build Project`)
+2. Open the `Terminal`/`Command Prompt`. Note: You can open a terminal inside Intellij too (`View` -> `Tool Windows` -> `Terminal`)
+3. `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files.
 4. Type `java seedu.addressbook.AddressBook`, then <kbd>Enter</kbd> to execute
 5. Now you can interact with the program through the CLI
 
@@ -152,7 +152,8 @@ Example:
 1. Open IntelliJ (if you are not in the welcome screen, click `File` > `Close Project` to close the existing project dialog first)
 2. Set up the correct JDK version
    1. Click `Configure` > `Project Defaults` > `Project Structure`
-   2. Click `New...` and find the directory of the JDK
+   2. If JDK 8 is listed in the drop down, select it. If it is not, click `New...` and select the directory where you installed JDK 8.
+   3. Click `OK`.
 3. Click `Import Project`
 4. Locate the project directory and click `OK`
 5. Select `Create project from existing sources` and click `Next`
