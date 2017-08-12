@@ -238,6 +238,8 @@ Learn [basic IntelliJ code navigation features](https://se-edu.github.io/se-book
 
 ## Use a debugger `[LO-Debugging]`
 
+Learn [basic IntelliJ debugging features](https://se-edu.github.io/se-book/intellij/debuggingBasic/).
+
 #### Exercise: Learn to step through code using the debugger
 
 Prerequisite: `[LO-IdeSetup]`
@@ -251,8 +253,6 @@ Here are some things you can do in your demonstration:
 3. 'Step through' a few lines of code while examining variable values
 4. 'Step into', and 'step out of', methods as you step through the code
 5. ...
-
-Resources: [Debugger Basics (from jetbrains.com)](https://www.jetbrains.com/help/idea/debugger-basics.html)
 
 ## Automate CLI testing `[LO-AutomatedCliTesting]`
 
@@ -314,7 +314,7 @@ Compare the code with and without the varargs feature.
 
 ## Follow a coding standard `[LO-CodingStandard]`
 
-The given code follows the [coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) 
+The given code follows the [coding standard][coding-standard] 
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
@@ -322,7 +322,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`.
 ## Apply coding best practices `[LO-CodingBestPractices]`
 
 Most of the given code follows the best practices mentioned
-[in this document](doc/CodeQualityBestPractices.md).
+[here][code-quality].
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`
 
@@ -330,17 +330,17 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 
 **Resources**:
 
-* [A catalog of common refactorings](http://refactoring.com/catalog/) - from http://refactoring.com/catalog
-* [Refactoring shortcuts in IntelliJ](https://www.jetbrains.com/help/idea/refactoring-source-code.html) - from https://www.jetbrains.com/help/idea/refactoring-source-code.html
+* [se-edu/se-gook: Refactoring](https://se-edu.github.io/se-book/refactoring/)
+* [se-edu/se-book: Refactoring in Intellij](https://se-edu.github.io/se-book/intellij/refactoring/)
 
 #### Exercise: Refactor the code to make it better
 
 Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `[LO-CodingBestPractices]`
 
 * Improve the code in the following ways,
-  * Fix [coding standard](https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html) 
+  * Fix [coding standard][coding-standard]
     violations.
-  * Fix violations of the best practices given in [in this document](doc/CodeQualityBestPractices.md).
+  * Fix violations of the best practices given in [in this document][code-quality].
   * Any other change that you think will improve the quality of the code.
 * Try to do the modifications as a combination of standard refactorings given in this
   [catalog](http://refactoring.com/catalog/)
@@ -348,7 +348,7 @@ Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `
 * If you know how to use Git, commit code after each refactoring.<br>
   In the commit message, mention which refactoring you applied.<br>
   Example commit messages: `Extract variable isValidPerson`, `Inline method isValidPerson()`
-* Remember to run the test script after each refactoring to prevent [regressions](https://en.wikipedia.org/wiki/Software_regression).
+* Remember to run the test script after each refactoring to prevent [regressions](https://se-edu.github.io/se-book/testing/testingTypes/regressionTesting).
 
 ## Abstract methods well `[LO-MethodAbstraction]`
 
@@ -406,7 +406,7 @@ Refactor the method `removePrefixSign` as suggested above.
 ## Follow SLAP `[LO-SLAP]`
 
 Notice how most of the methods in `AddressBook` are written at a single
-level of abstraction (_cf_ [SLAP](http://programmers.stackexchange.com/questions/110933/how-to-determine-the-levels-of-abstraction))
+level of abstraction (_cf_ [se-edu/se-book:SLAP](https://se-edu.github.io/se-book/codeQuality/practices/slapHard/))
 
 Here is an example:
 
@@ -466,3 +466,6 @@ The full list of contributors for se-edu can be found [here](https://se-edu.gith
   if you noticed bugs or have suggestions on how to improve.
 * **Contributing**: We welcome pull requests. Refer to our website [here](https://se-edu.github.io/#contributing).
 * If you would like to contact us, refer to [our website](https://se-edu.github.io/#contact).
+
+[coding-standard]: https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md "Java Coding Standard"
+[code-quality]: https://se-edu.github.io/se-book/codeQuality/ "Code Quality Best Practices"
