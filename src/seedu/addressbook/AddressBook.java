@@ -382,7 +382,7 @@ public class AddressBook {
         case COMMAND_DELETE_WORD:
             return executeDeletePerson(commandArgs);
         case COMMAND_SORT_WORD:
-            return executeListAllPersonsInAddressBook();
+            return executeSortAllPersonsInAddressBook();
         case COMMAND_CLEAR_WORD:
             return executeClearAddressBook();
         case COMMAND_HELP_WORD:
@@ -583,6 +583,16 @@ public class AddressBook {
         ArrayList<String[]> toBeDisplayed = getAllPersonsInAddressBook();
         showToUser(toBeDisplayed);
         return getMessageForPersonsDisplayedSummary(toBeDisplayed);
+    }
+
+    private static String executeSortAllPersonsInAddressBook() {
+        ArrayList<String[]> toBeDisplayed = sort(getAllPersonsInAddressBook());
+        showToUser(toBeDisplayed);
+        return getMessageForPersonsDisplayedSummary(toBeDisplayed);
+    }
+
+    private static ArrayList<String[]> sort(ArrayList<String[]> persons) {
+        return persons;
     }
 
     /**
