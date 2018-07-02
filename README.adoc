@@ -2,6 +2,10 @@
 :toc:
 :toc-title:
 :toc-placement: preamble
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+endif::[]
 
 * This is a CLI (Command Line Interface) Address Book application *written in procedural fashion*.
 * It is a Java sample application intended for students learning Software Engineering while using Java as
@@ -41,22 +45,21 @@ Please refer to the <<setting-up>> section to learn how to set up the project.
 
 Format: `help`
 
-________________________________________________________________
+[TIP]
+====
 Help is also shown if you enter an incorrect command e.g. `abcd`
-________________________________________________________________
+====
 
 ==== Adding a person: `add`
 
-_________________________________
-Adds a person to the address book
-_________________________________
-
+Adds a person to the address book. +
 Format: `add NAME p/PHONE_NUMBER e/EMAIL`
 
-________________________________________________________________________
-Words in `UPPER_CASE` are the parameters
+[NOTE]
+====
+Words in `UPPER_CASE` are the parameters. +
 Phone number and email can be in any order but the name must come first.
-________________________________________________________________________
+====
 
 Examples:
 
@@ -65,69 +68,53 @@ Examples:
 
 ==== Listing all persons: `list`
 
-______________________________________________________________________________________________
 Shows a list of persons, as an indexed list, in the order they were added to the address book,
-oldest first.
-______________________________________________________________________________________________
-
+oldest first. +
 Format: `list`
 
 ==== Finding a person by keyword `find`
 
-_______________________________________
-Finds persons that match given keywords
-_______________________________________
-
+Finds persons that match given keywords. +
 Format: `find KEYWORD [MORE_KEYWORDS]`
 
-___________________________________________________________________________________________________
+[NOTE]
+====
 The search is case sensitive, the order of the keywords does not matter, only the name is searched,
 and persons matching at least one keyword will be returned (i.e. `OR` search).
-___________________________________________________________________________________________________
+====
 
 Examples:
 
-* `find John`
-+
-_________________________________
+* `find John` +
 Returns `John Doe` but not `john`
-_________________________________
-* `find Betsy Tim John`
-+
-_________________________________________________________
-Returns Any person having names `Betsy`, `Tim`, or `John`
-_________________________________________________________
+
+* `find Betsy Tim John` +
+Returns any person having names `Betsy`, `Tim`, or `John`
 
 ==== Deleting a person: `delete`
 
+Deletes the specified version from the address book. +
 Format: `delete INDEX`
 
-_______________________________________________________________________
-Deletes the person at the specified `INDEX`.
+[NOTE]
+====
 The index refers to the index numbers shown in the most recent listing.
-_______________________________________________________________________
+====
 
 Examples:
 
-* `list`
-`delete 2`
-+
-___________________________________________
+* `list` +
+`delete 2` +
 Deletes the 2nd person in the address book.
-___________________________________________
-* `find Betsy`
-`delete 1`
-+
-____________________________________________________________
+
+* `find Betsy` +
+`delete 1` +
 Deletes the 1st person in the results of the `find` command.
-____________________________________________________________
 
 ==== Clearing all entries: `clear`
 
-___________________________________________
 Clears all entries from the address book. +
 Format: `clear`
-___________________________________________
 
 ==== Exiting the program: `exit`
 
@@ -148,17 +135,19 @@ Example:
 * `java seedu.addressbook.AddressBook mydata.txt`
 * `java seedu.addressbook.AddressBook myFolder/mydata.txt`
 
-____________________________________________________________________________________
-The file path must contain a valid file name and a valid parent directory.
-File name is valid if it has an extension and no reserved characters (OS-dependent).
-Parent directory is valid if it exists.
+[NOTE]
+====
+The file path must contain a valid file name and a valid parent directory. +
+File name is valid if it has an extension and no reserved characters (OS-dependent). +
+Parent directory is valid if it exists. +
 Note for non-Windows users: if the file already exists, it must be a 'regular' file.
-____________________________________________________________________________________
+====
 
-_______________________________________________________________________________________
+[NOTE]
+====
 When running the program inside IntelliJ, there is a way to set command line parameters
 before running the program.
-_______________________________________________________________________________________
+====
 
 '''''
 
@@ -216,12 +205,14 @@ the test has passed.
 
 *Troubleshooting test failures*
 
-* Problem: How do I examine the exact differences between `actual.txt` and `expected.txt`?
+* Problem: How do I examine the exact differences between `actual.txt` and `expected.txt`? +
 Solution: You can use a diff/merge tool with a GUI e.g. WinMerge (on Windows)
-* Problem: The two files look exactly the same, but the test script reports they are different.
+
+* Problem: The two files look exactly the same, but the test script reports they are different. +
 Solution: This can happen because the line endings used by Windows is different from Unix-based
 OSes. Convert the `actual.txt` to the format used by your OS using some https://kb.iu.edu/d/acux[utility].
-* Problem: Test fails during the very first time.
+
+* Problem: Test fails during the very first time. +
 Solution: The output of the very first test run could be slightly different because the program
 creates a new storage file. Tests should pass from the 2nd run onwards.
 
@@ -358,7 +349,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 
 *Resources*:
 
-* https://se-edu.github.io/se-book/refactoring/[se-edu/se-gook: Refactoring]
+* https://se-edu.github.io/se-book/refactoring/[se-edu/se-book: Refactoring]
 * https://se-edu.github.io/se-book/intellij/refactoring/[se-edu/se-book: Refactoring in Intellij]
 
 ==== Exercise: Refactor the code to make it better
@@ -407,12 +398,14 @@ While it is short, there are some problems with how it has been abstracted.
 
 . It contains the term `sign` which is not a term used by the AddressBook vocabulary.
 +
-_____________________________________________________________________________________________________________
+[NOTE]
+====
 *A method adds a new term to the vocabulary used to express the solution*.
 Therefore, it is not good when a method name contains terms that are not strictly necessary to express the
 solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
 (e.g. it does not go well with the other terms already used).
-_____________________________________________________________________________________________________________
+====
+
 . Its implementation is not doing exactly what is advertised by the method name and the header comment.
 For example, the code does not remove only prefixes; it removes `sign` from anywhere in the `s`.
 . The method can be _more general_ and _more independent_ from the rest of the code. For example,
@@ -472,7 +465,7 @@ i.e. How bad can you make it without breaking the functionality while still maki
 programmer (but a very bad programmer :-)).
 * In particular, inlining methods can worsen the code quality fast.
 
-=== Work in a 1kLoC code base`[LO-1KLoC]`
+=== Work in a 1kLoC code base `[LO-1KLoC]`
 
 ==== Exercise: Enhance the code
 
