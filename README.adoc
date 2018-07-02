@@ -11,12 +11,12 @@ usually write in data structure modules.
 * It can be used to achieve a number of beginner-level link:#learning-outcomes[learning outcomes] without
 running into the complications of OOP or GUI programmings.
 
-= User Guide
+== User Guide
 
 This product is not meant for end-users and therefore there is no user-friendly installer.
 Please refer to the link:#setting-up[Setting up] section to learn how to set up the project.
 
-== Starting the program
+=== Starting the program
 
 *Using IntelliJ*
 
@@ -35,7 +35,7 @@ Please refer to the link:#setting-up[Setting up] section to learn how to set up 
 4.  Type `java seedu.addressbook.AddressBook`, then Enter to execute
 5.  Now you can interact with the program through the CLI
 
-== List of commands
+=== List of commands
 
 ==== Viewing help: `help`
 
@@ -162,9 +162,9 @@ ________________________________________________________________________________
 
 '''''
 
-= Developer Guide
+== Developer Guide
 
-== Setting up
+=== Setting up
 
 *Prerequisites*
 
@@ -185,7 +185,7 @@ ________________________________________________________________________________
 7.  Ensure that your src folder is checked. Keep clicking `Next`
 8.  Click `Finish`
 
-== Design
+=== Design
 
 AddressBook saves data in a plain text file, one line for each person, in the format `NAME p/PHONE e/EMAIL`.
 Here is an example:
@@ -198,7 +198,7 @@ Jane Doe p/12346758 e/jane@gmail.com
 All person data are loaded to memory at start up and written to the file after any command that mutates data.
 In-memory data are held in a `ArrayList<String[]>` where each `String[]` object represents a person.
 
-== Testing
+=== Testing
 
 *Windows*
 
@@ -227,12 +227,12 @@ creates a new storage file. Tests should pass from the 2nd run onwards.
 
 '''''
 
-= Learning Outcomes
+== Learning Outcomes
 
 _Learning Outcomes_ are the things you should be able to do after studying this code and completing the
 corresponding exercises.
 
-== Set up a project in an IDE `[LO-IdeSetup]`
+=== Set up a project in an IDE `[LO-IdeSetup]`
 
 * Learn https://se-edu.github.io/se-book/intellij/projectSetup/[how to set up a project in IntelliJ].
 
@@ -251,7 +251,7 @@ Part B:
 * link:#starting-the-program[Run the program] from within IntelliJ, and try the features described in
 the link:#user-guide[User guide] section.
 
-== Navigate code efficiently `[LO-CodeNavigation]`
+=== Navigate code efficiently `[LO-CodeNavigation]`
 
 The `AddressBook.java` code is rather long, which makes it cumbersome to navigate by scrolling alone.
 Navigating code using IDE shortcuts is a more efficient option.
@@ -263,7 +263,7 @@ Learn https://se-edu.github.io/se-book/intellij/codeNavigation/[basic IntelliJ c
 
 * Use Intellij basic code navigation features to navigate code of this project.
 
-== Use a debugger `[LO-Debugging]`
+=== Use a debugger `[LO-Debugging]`
 
 Learn https://se-edu.github.io/se-book/intellij/debuggingBasic/[basic IntelliJ debugging features].
 
@@ -281,7 +281,7 @@ Here are some things you can do in your demonstration:
 4.  'Step into', and 'step out of', methods as you step through the code
 5.  ...
 
-== Automate CLI testing `[LO-AutomatedCliTesting]`
+=== Automate CLI testing `[LO-AutomatedCliTesting]`
 
 Learn https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/[how to automate testing of CLIs].
 
@@ -293,7 +293,7 @@ Learn https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/[ho
 Modify `expected.txt` to make the tests pass again.
 * Edit the `AddressBook.java` to modify the behavior slightly and modify tests to match.
 
-== Use Collections `[LO-Collections]`
+=== Use Collections `[LO-Collections]`
 
 Note how the `AddressBook` class uses `ArrayList<>` class (from the Java `Collections` library) to store a list of `String` or `String[]` objects.
 
@@ -315,7 +315,7 @@ john.put(PERSON_PROPERTY_EMAIL, "john.doe@email.com");
 //etc.
 ----
 
-== Use Enums `[LO-Enums]`
+=== Use Enums `[LO-Enums]`
 
 ==== Exercise: Use `HashMap` + `Enum`
 
@@ -331,7 +331,7 @@ john.put(PersonProperty.EMAIL, "john.doe@email.com");
 //etc.
 ----
 
-== Use Varargs `[LO-Varargs]`
+=== Use Varargs `[LO-Varargs]`
 
 Note how the `showToUser` method uses https://se-edu.github.io/se-book/javaTools/varargs/[Java Varargs feature].
 
@@ -340,21 +340,21 @@ Note how the `showToUser` method uses https://se-edu.github.io/se-book/javaTools
 Modify the code to remove the use of the Varargs feature.
 Compare the code with and without the varargs feature.
 
-== Follow a coding standard `[LO-CodingStandard]`
+=== Follow a coding standard `[LO-CodingStandard]`
 
 The given code follows the https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md[coding standard]
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
 
-== Apply coding best practices `[LO-CodingBestPractices]`
+=== Apply coding best practices `[LO-CodingBestPractices]`
 
 Most of the given code follows the best practices mentioned
 https://se-edu.github.io/se-book/codeQuality/[here].
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`
 
-== Refactor code `[LO-Refactor]`
+=== Refactor code `[LO-Refactor]`
 
 *Resources*:
 
@@ -378,7 +378,7 @@ In the commit message, mention which refactoring you applied.
 Example commit messages: `Extract variable isValidPerson`, `Inline method isValidPerson()`
 * Remember to run the test script after each refactoring to prevent https://se-edu.github.io/se-book/testing/testingTypes/regressionTesting[regressions].
 
-== Abstract methods well `[LO-MethodAbstraction]`
+=== Abstract methods well `[LO-MethodAbstraction]`
 
 Notice how most of the methods in `AddressBook` are short and focused (does only one thing and does it well).
 
@@ -434,7 +434,7 @@ In that case, that method can make use of the more general method suggested abov
 
 Refactor the method `removePrefixSign` as suggested above.
 
-== Follow SLAP `[LO-SLAP]`
+=== Follow SLAP `[LO-SLAP]`
 
 Notice how most of the methods in `AddressBook` are written at a single
 level of abstraction (_cf_ https://se-edu.github.io/se-book/codeQuality/practices/slapHard/[se-edu/se-book:SLAP])
@@ -472,7 +472,7 @@ i.e. How bad can you make it without breaking the functionality while still maki
 programmer (but a very bad programmer :-)).
 * In particular, inlining methods can worsen the code quality fast.
 
-== Work in a 1kLoC code base`[LO-1KLoC]`
+=== Work in a 1kLoC code base`[LO-1KLoC]`
 
 ==== Exercise: Enhance the code
 
@@ -488,13 +488,13 @@ Some suggested enhancements:
 
 '''''
 
-= Contributors
+== Contributors
 
 The full list of contributors for se-edu can be found https://se-edu.github.io/docs/Team.html[here].
 
 '''''
 
-= Contact Us
+== Contact Us
 
 * *Bug reports, Suggestions*: Post in our https://github.com/se-edu/addressbook-level1/issues[issue tracker]
 if you noticed bugs or have suggestions on how to improve.
