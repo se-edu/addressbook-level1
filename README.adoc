@@ -20,20 +20,20 @@ Please refer to the link:#setting-up[Setting up] section to learn how to set up 
 
 *Using IntelliJ*
 
-1.  Find the project in the `Project Explorer` (usually located at the left side)
-1.  If the `Project Explorer` is not visible, press ALT+1 for Windows/Linux, CMD+1 for macOS to open the `Project Explorer` tab
-2.  Go to the `src` folder and locate the `AddressBook` file
-3.  Right click the file and select `Run AddressBook.main()`
-4.  The program now should run on the `Console` (usually located at the bottom side)
-5.  Now you can interact with the program through the `Console`
+. Find the project in the `Project Explorer` (usually located at the left side)
+.. If the `Project Explorer` is not visible, press ALT+1 for Windows/Linux, CMD+1 for macOS to open the `Project Explorer` tab
+. Go to the `src` folder and locate the `AddressBook` file
+. Right click the file and select `Run AddressBook.main()`
+. The program now should run on the `Console` (usually located at the bottom side)
+. Now you can interact with the program through the `Console`
 
 *Using Command Line*
 
-1.  'Build' the project using IntelliJ (`Build` -> `Build Project`)
-2.  Open the `Terminal`/`Command Prompt`. Note: You can open a terminal inside Intellij too (`View` -> `Tool Windows` -> `Terminal`)
-3.  `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files.
-4.  Type `java seedu.addressbook.AddressBook`, then Enter to execute
-5.  Now you can interact with the program through the CLI
+. 'Build' the project using IntelliJ (`Build` -> `Build Project`)
+. Open the `Terminal`/`Command Prompt`. Note: You can open a terminal inside Intellij too (`View` -> `Tool Windows` -> `Terminal`)
+. `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files.
+. Type `java seedu.addressbook.AddressBook`, then Enter to execute
+. Now you can interact with the program through the CLI
 
 === List of commands
 
@@ -173,17 +173,17 @@ ________________________________________________________________________________
 
 *Importing the project into IntelliJ*
 
-1.  Open IntelliJ (if you are not in the welcome screen, click `File` > `Close Project` to close the existing project dialog first)
-2.  Set up the correct JDK version
-1.  Click `Configure` > `Project Defaults` > `Project Structure`
-2.  If JDK 8 is listed in the drop down, select it. If it is not, click `New...` and select the directory where you installed JDK 8.
-3.  Click `OK`.
-3.  Click `Import Project`
-4.  Locate the project directory and click `OK`
-5.  Select `Create project from existing sources` and click `Next`
-6.  Rename the project if you want. Click `Next`
-7.  Ensure that your src folder is checked. Keep clicking `Next`
-8.  Click `Finish`
+. Open IntelliJ (if you are not in the welcome screen, click `File` > `Close Project` to close the existing project dialog first)
+. Set up the correct JDK version
+.. Click `Configure` > `Project Defaults` > `Project Structure`
+.. If JDK 8 is listed in the drop down, select it. If it is not, click `New...` and select the directory where you installed JDK 8.
+.. Click `OK`.
+. Click `Import Project`
+. Locate the project directory and click `OK`
+. Select `Create project from existing sources` and click `Next`
+. Rename the project if you want. Click `Next`
+. Ensure that your src folder is checked. Keep clicking `Next`
+. Click `Finish`
 
 === Design
 
@@ -202,16 +202,16 @@ In-memory data are held in a `ArrayList<String[]>` where each `String[]` object 
 
 *Windows*
 
-1.  Open a DOS window in the `test` folder
-2.  Run the `runtests.bat` script
-3.  If the script reports that there is no difference between `actual.txt` and `expected.txt`,
+. Open a DOS window in the `test` folder
+. Run the `runtests.bat` script
+. If the script reports that there is no difference between `actual.txt` and `expected.txt`,
 the test has passed.
 
 *Mac/Unix/Linux*
 
-1.  Open a terminal window in the `test` folder
-2.  Run the `runtests.sh` script
-3.  If the script reports that there is no difference between `actual.txt` and `expected.txt`,
+. Open a terminal window in the `test` folder
+. Run the `runtests.sh` script
+. If the script reports that there is no difference between `actual.txt` and `expected.txt`,
 the test has passed.
 
 *Troubleshooting test failures*
@@ -245,8 +245,8 @@ Part A:
 Part B:
 
 * Download the source code for this project: Click on the `clone or download` link above and either,
-1.  download as a zip file and unzip content.
-2.  clone the repo (if you know how to use Git) to your Computer.
+. download as a zip file and unzip content.
+. clone the repo (if you know how to use Git) to your Computer.
 * link:#setting-up[Set up] the project in IntelliJ.
 * link:#starting-the-program[Run the program] from within IntelliJ, and try the features described in
 the link:#user-guide[User guide] section.
@@ -275,11 +275,11 @@ Demonstrate your debugging skills using the AddressBook code.
 
 Here are some things you can do in your demonstration:
 
-1.  Set a 'break point'
-2.  Run the program in debug mode
-3.  'Step through' a few lines of code while examining variable values
-4.  'Step into', and 'step out of', methods as you step through the code
-5.  ...
+. Set a 'break point'
+. Run the program in debug mode
+. 'Step through' a few lines of code while examining variable values
+. 'Step into', and 'step out of', methods as you step through the code
+. ...
 
 === Automate CLI testing `[LO-AutomatedCliTesting]`
 
@@ -405,7 +405,7 @@ A well-abstracted method should do only one thing.
 *Case 2*. Consider the method `removePrefixSign(String s, String sign)`.
 While it is short, there are some problems with how it has been abstracted.
 
-1.  It contains the term `sign` which is not a term used by the AddressBook vocabulary.
+. It contains the term `sign` which is not a term used by the AddressBook vocabulary.
 +
 _____________________________________________________________________________________________________________
 *A method adds a new term to the vocabulary used to express the solution*.
@@ -413,9 +413,9 @@ Therefore, it is not good when a method name contains terms that are not strictl
 solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
 (e.g. it does not go well with the other terms already used).
 _____________________________________________________________________________________________________________
-2.  Its implementation is not doing exactly what is advertised by the method name and the header comment.
+. Its implementation is not doing exactly what is advertised by the method name and the header comment.
 For example, the code does not remove only prefixes; it removes `sign` from anywhere in the `s`.
-3.  The method can be _more general_ and _more independent_ from the rest of the code. For example,
+. The method can be _more general_ and _more independent_ from the rest of the code. For example,
 the method below can do the same job, but is more general (works for any string, not just parameters)
 and is more independent from the rest of the code (not specific to AddressBook)
 +
