@@ -1,4 +1,7 @@
 = AddressBook (Level 1)
+:toc:
+:toc-title:
+:toc-placement: preamble
 
 * This is a CLI (Command Line Interface) Address Book application *written in procedural fashion*.
 * It is a Java sample application intended for students learning Software Engineering while using Java as
@@ -7,34 +10,6 @@ the main programming language.
 usually write in data structure modules.
 * It can be used to achieve a number of beginner-level link:#learning-outcomes[learning outcomes] without
 running into the complications of OOP or GUI programmings.
-
-*Table of Contents*
-
-* link:#user-guide[*User Guide*]
-** link:#starting-the-program[Starting the program]
-** link:#list-of-commands[List of commands]
-* link:#developer-guide[*Developer Guide*]
-** link:#setting-up[Setting Up]
-** link:#design[Design]
-** link:#testing[Testing]
-* link:#learning-outcomes[*Learning Outcomes*]
-1.  link:#set-up-a-project-in-an-ide-lo-idesetup[Set up a project in an IDE [`LO-IdeSetup`]]
-2.  link:#navigate-code-efficiently-lo-codenavigation[Navigate code efficiently [`LO-CodeNavigation`]]
-3.  link:#use-a-debugger-lo-debugging[Use a debugger [`LO-Debugging`]]
-4.  link:#automate-cli-testing-lo-automatedclitesting[Automate CLI testing [`LO-AutomatedCliTesting`]]
-5.  link:#use-collections-lo-collections[Use Collections [`LO-Collections`]]
-6.  link:#use-enums-lo-enums[Use Enums [`LO-Enums`]]
-7.  link:#use-varargs-lo-varargs[Use Varargs [`LO-Varargs`]]
-8.  link:#follow-a-coding-standard-lo-codingstandard[Follow a coding standard [`LO-CodingStandard`]]
-9.  link:#apply-coding-best-practices-lo-codingbestpractices[Apply coding best practices [`LO-CodingBestPractices`]]
-10. link:#refactor-code-lo-refactor[Refactor code [`LO-Refactor`]]
-11. link:#abstract-methods-well-lo-methodabstraction[Abstract methods well [`LO-MethodAbstraction`]]
-12. link:#follow-slap-lo-slap[Follow SLAP [`LO-SLAP`]]
-13. link:#work-in-a-1kloc-code-baselo-1kloc[Work in a 1kLoC code base [`LO-1KLoC`]]
-* link:#contributors[*Contributors*]
-* link:#contact-us[*Contact Us*]
-
-'''''
 
 = User Guide
 
