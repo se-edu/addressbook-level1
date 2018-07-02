@@ -24,3 +24,4 @@ test/data/
 
 # Gradle files
 /.gradle/
+/build/
