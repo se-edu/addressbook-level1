@@ -8,13 +8,13 @@
 the main programming language.
 * It provides a *reasonably well-written* code example that is *significantly bigger* than what students
 usually write in data structure modules.
-* It can be used to achieve a number of beginner-level link:#learning-outcomes[learning outcomes] without
+* It can be used to achieve a number of beginner-level <<learning-outcomes>> without
 running into the complications of OOP or GUI programmings.
 
 == User Guide
 
 This product is not meant for end-users and therefore there is no user-friendly installer.
-Please refer to the link:#setting-up[Setting up] section to learn how to set up the project.
+Please refer to the <<setting-up>> section to learn how to set up the project.
 
 === Starting the program
 
@@ -247,9 +247,9 @@ Part B:
 * Download the source code for this project: Click on the `clone or download` link above and either,
 . download as a zip file and unzip content.
 . clone the repo (if you know how to use Git) to your Computer.
-* link:#setting-up[Set up] the project in IntelliJ.
-* link:#starting-the-program[Run the program] from within IntelliJ, and try the features described in
-the link:#user-guide[User guide] section.
+* <<setting-up, Set up>> the project in IntelliJ.
+* <<starting-the-program, Run the program>> from within IntelliJ, and try the features described in
+the <<user-guide>> section.
 
 === Navigate code efficiently `[LO-CodeNavigation]`
 
@@ -287,7 +287,7 @@ Learn https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/[ho
 
 ==== Exercise: Practice automated CLI testing
 
-* Run the tests as explained in the link:#testing[Testing] section.
+* Run the tests as explained in the <<testing>> section.
 * Examine the test script to understand how the script works.
 * Add a few more tests to the `input.txt`. Run the tests. It should fail.
 Modify `expected.txt` to make the tests pass again.
