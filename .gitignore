@@ -21,3 +21,7 @@ test/actual.txt
 test/localrun.bat
 test/data/
 /bin/
+
+# Gradle files
+/.gradle/
+/build/
