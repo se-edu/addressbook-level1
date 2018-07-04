@@ -16,140 +16,6 @@ usually write in data structure modules.
 * It can be used to achieve a number of beginner-level <<learning-outcomes>> without
 running into the complications of OOP or GUI programmings.
 
-== User Guide
-
-This product is not meant for end-users and therefore there is no user-friendly installer.
-Please refer to the <<DeveloperGuide#SettingUp, Setting up>> section to learn how to set up the project.
-
-=== Starting the program
-
-*Using IntelliJ*
-
-. Find the project in the `Project Explorer` (usually located at the left side)
-.. If the `Project Explorer` is not visible, press ALT+1 for Windows/Linux, CMD+1 for macOS to open the `Project Explorer` tab
-. Go to the `src` folder and locate the `AddressBook` file
-. Right click the file and select `Run AddressBook.main()`
-. The program now should run on the `Console` (usually located at the bottom side)
-. Now you can interact with the program through the `Console`
-
-*Using Command Line*
-
-. 'Build' the project using IntelliJ (`Build` -> `Build Project`)
-. Open the `Terminal`/`Command Prompt`. Note: You can open a terminal inside Intellij too (`View` -> `Tool Windows` -> `Terminal`)
-. `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files.
-. Type `java seedu.addressbook.AddressBook`, then Enter to execute
-. Now you can interact with the program through the CLI
-
-=== List of commands
-
-==== Viewing help: `help`
-
-Format: `help`
-
-[TIP]
-====
-Help is also shown if you enter an incorrect command e.g. `abcd`
-====
-
-==== Adding a person: `add`
-
-Adds a person to the address book. +
-Format: `add NAME p/PHONE_NUMBER e/EMAIL`
-
-[NOTE]
-====
-Words in `UPPER_CASE` are the parameters. +
-Phone number and email can be in any order but the name must come first.
-====
-
-Examples:
-
-* `add John Doe p/98765432 e/johnd@gmail.com`
-* `add Betsy Crowe e/bencrowe@gmail.com p/1234567`
-
-==== Listing all persons: `list`
-
-Shows a list of persons, as an indexed list, in the order they were added to the address book,
-oldest first. +
-Format: `list`
-
-==== Finding a person by keyword `find`
-
-Finds persons that match given keywords. +
-Format: `find KEYWORD [MORE_KEYWORDS]`
-
-[NOTE]
-====
-The search is case sensitive, the order of the keywords does not matter, only the name is searched,
-and persons matching at least one keyword will be returned (i.e. `OR` search).
-====
-
-Examples:
-
-* `find John` +
-Returns `John Doe` but not `john`
-
-* `find Betsy Tim John` +
-Returns any person having names `Betsy`, `Tim`, or `John`
-
-==== Deleting a person: `delete`
-
-Deletes the specified version from the address book. +
-Format: `delete INDEX`
-
-[NOTE]
-====
-The index refers to the index numbers shown in the most recent listing.
-====
-
-Examples:
-
-* `list` +
-`delete 2` +
-Deletes the 2nd person in the address book.
-
-* `find Betsy` +
-`delete 1` +
-Deletes the 1st person in the results of the `find` command.
-
-==== Clearing all entries: `clear`
-
-Clears all entries from the address book. +
-Format: `clear`
-
-==== Exiting the program: `exit`
-
-Format: `exit`
-
-==== Saving the data
-
-Address book data are saved in the hard disk automatically after any command that changes the data.
-There is no need to save manually.
-
-==== Changing the save location
-
-Address book data are saved in a file called `addressbook.txt` in the project root folder.
-You can change the location by specifying the file path as a program argument.
-
-Example:
-
-* `java seedu.addressbook.AddressBook mydata.txt`
-* `java seedu.addressbook.AddressBook myFolder/mydata.txt`
-
-[NOTE]
-====
-The file path must contain a valid file name and a valid parent directory. +
-File name is valid if it has an extension and no reserved characters (OS-dependent). +
-Parent directory is valid if it exists. +
-Note for non-Windows users: if the file already exists, it must be a 'regular' file.
-====
-
-[NOTE]
-====
-When running the program inside IntelliJ, there is a way to set command line parameters
-before running the program.
-====
-
 == Learning Outcomes
 
 _Learning Outcomes_ are the things you should be able to do after studying this code and completing the
@@ -171,8 +37,8 @@ Part B:
 . download as a zip file and unzip content.
 . clone the repo (if you know how to use Git) to your Computer.
 * <<DeveloperGuide#SettingUp, Set up>> the project in IntelliJ.
-* <<starting-the-program, Run the program>> from within IntelliJ, and try the features described in
-the <<user-guide>> section.
+* <<UserGuide#StartingTheProgram, Run the program>> from within IntelliJ, and try the features described in
+the <<UserGuide#, User Guide>> section.
 
 === Navigate code efficiently `[LO-CodeNavigation]`
 
