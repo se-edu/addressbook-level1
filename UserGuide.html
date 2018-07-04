@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>AddressBook Level 1 - User Guide</title>
+<link rel="stylesheet" href="stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>AddressBook Level 1 - User Guide</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This product is not meant for end-users and therefore there is no user-friendly installer.
+Please refer to the <a href="DeveloperGuide.html#SettingUp">Setting up</a> section to learn how to set up the project.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="StartingTheProgram"><a class="link" href="#StartingTheProgram">Starting the program</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Using IntelliJ</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Find the project in the <code>Project Explorer</code> (usually located at the left side)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the <code>Project Explorer</code> is not visible, press ALT+1 for Windows/Linux, CMD+1 for macOS to open the <code>Project Explorer</code> tab</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Go to the <code>src</code> folder and locate the <code>AddressBook</code> file</p>
+</li>
+<li>
+<p>Right click the file and select <code>Run AddressBook.main()</code></p>
+</li>
+<li>
+<p>The program now should run on the <code>Console</code> (usually located at the bottom side)</p>
+</li>
+<li>
+<p>Now you can interact with the program through the <code>Console</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Using Command Line</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>'Build' the project using IntelliJ (<code>Build</code> &#8594; <code>Build Project</code>)</p>
+</li>
+<li>
+<p>Open the <code>Terminal</code>/<code>Command Prompt</code>. Note: You can open a terminal inside Intellij too (<code>View</code> &#8594; <code>Tool Windows</code> &#8594; <code>Terminal</code>)</p>
+</li>
+<li>
+<p><code>cd</code> into the project&#8217;s <code>out\production\addressbook-level1</code> directory. Note: That is the where Intellij puts its compiled class files.</p>
+</li>
+<li>
+<p>Type <code>java seedu.addressbook.AddressBook</code>, then Enter to execute</p>
+</li>
+<li>
+<p>Now you can interact with the program through the CLI</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="list-of-commands"><a class="link" href="#list-of-commands">List of commands</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">Viewing help: <code>help</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>help</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Help is also shown if you enter an incorrect command e.g. <code>abcd</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">Adding a person: <code>add</code></a></h3>
+<div class="paragraph">
+<p>Adds a person to the address book.<br>
+Format: <code>add NAME p/PHONE_NUMBER e/EMAIL</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Words in <code>UPPER_CASE</code> are the parameters.<br>
+Phone number and email can be in any order but the name must come first.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>add John Doe p/98765432 e/johnd@gmail.com</code></p>
+</li>
+<li>
+<p><code>add Betsy Crowe e/bencrowe@gmail.com p/1234567</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">Listing all persons: <code>list</code></a></h3>
+<div class="paragraph">
+<p>Shows a list of persons, as an indexed list, in the order they were added to the address book,
+oldest first.<br>
+Format: <code>list</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-person-by-keyword-code-find-code"><a class="link" href="#finding-a-person-by-keyword-code-find-code">Finding a person by keyword <code>find</code></a></h3>
+<div class="paragraph">
+<p>Finds persons that match given keywords.<br>
+Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The search is case sensitive, the order of the keywords does not matter, only the name is searched,
+and persons matching at least one keyword will be returned (i.e. <code>OR</code> search).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find John</code><br>
+Returns <code>John Doe</code> but not <code>john</code></p>
+</li>
+<li>
+<p><code>find Betsy Tim John</code><br>
+Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">Deleting a person: <code>delete</code></a></h3>
+<div class="paragraph">
+<p>Deletes the specified version from the address book.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The index refers to the index numbers shown in the most recent listing.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd person in the address book.</p>
+</li>
+<li>
+<p><code>find Betsy</code><br>
+<code>delete 1</code><br>
+Deletes the 1st person in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">Clearing all entries: <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears all entries from the address book.<br>
+Format: <code>clear</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">Exiting the program: <code>exit</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>exit</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">Saving the data</a></h3>
+<div class="paragraph">
+<p>Address book data are saved in the hard disk automatically after any command that changes the data.</p>
+</div>
+<div class="paragraph">
+<p>There is no need to save manually.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changing-the-save-location"><a class="link" href="#changing-the-save-location">Changing the save location</a></h3>
+<div class="paragraph">
+<p>Address book data are saved in a file called <code>addressbook.txt</code> in the project root folder.
+You can change the location by specifying the file path as a program argument.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>java seedu.addressbook.AddressBook mydata.txt</code></p>
+</li>
+<li>
+<p><code>java seedu.addressbook.AddressBook myFolder/mydata.txt</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The file path must contain a valid file name and a valid parent directory.<br>
+File name is valid if it has an extension and no reserved characters (OS-dependent).<br>
+Parent directory is valid if it exists.<br>
+Note for non-Windows users: if the file already exists, it must be a 'regular' file.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When running the program inside IntelliJ, there is a way to set command line parameters
+before running the program.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-07-04 16:26:24 UTC
+</div>
+</div>
+</body>
+</html>

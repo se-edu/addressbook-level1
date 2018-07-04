@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>AddressBook Level 1 - Developer Guide</title>
+<link rel="stylesheet" href="stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>AddressBook Level 1 - Developer Guide</h1>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="SettingUp"><a class="link" href="#SettingUp">Setting up</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Prerequisites</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JDK 8 or later</p>
+</li>
+<li>
+<p>IntelliJ IDE</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Importing the project into IntelliJ</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open IntelliJ (if you are not in the welcome screen, click <code>File</code> &gt; <code>Close Project</code> to close the existing project dialog first)</p>
+</li>
+<li>
+<p>Set up the correct JDK version</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Click <code>Configure</code> &gt; <code>Project Defaults</code> &gt; <code>Project Structure</code></p>
+</li>
+<li>
+<p>If JDK 8 is listed in the drop down, select it. If it is not, click <code>New&#8230;&#8203;</code> and select the directory where you installed JDK 8.</p>
+</li>
+<li>
+<p>Click <code>OK</code>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click <code>Import Project</code></p>
+</li>
+<li>
+<p>Locate the project directory and click <code>OK</code></p>
+</li>
+<li>
+<p>Select <code>Create project from existing sources</code> and click <code>Next</code></p>
+</li>
+<li>
+<p>Rename the project if you want. Click <code>Next</code></p>
+</li>
+<li>
+<p>Ensure that your src folder is checked. Keep clicking <code>Next</code></p>
+</li>
+<li>
+<p>Click <code>Finish</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="design"><a class="link" href="#design">Design</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AddressBook saves data in a plain text file, one line for each person, in the format <code>NAME p/PHONE e/EMAIL</code>.
+Here is an example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>John Doe p/98765432 e/johnd@gmail.com
+Jane Doe p/12346758 e/jane@gmail.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All person data are loaded to memory at start up and written to the file after any command that mutates data.
+In-memory data are held in a <code>ArrayList&lt;String[]&gt;</code> where each <code>String[]</code> object represents a person.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Testing"><a class="link" href="#Testing">Testing</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Windows</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a DOS window in the <code>test</code> folder</p>
+</li>
+<li>
+<p>Run the <code>runtests.bat</code> script</p>
+</li>
+<li>
+<p>If the script reports that there is no difference between <code>actual.txt</code> and <code>expected.txt</code>,
+the test has passed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Mac/Unix/Linux</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a terminal window in the <code>test</code> folder</p>
+</li>
+<li>
+<p>Run the <code>runtests.sh</code> script</p>
+</li>
+<li>
+<p>If the script reports that there is no difference between <code>actual.txt</code> and <code>expected.txt</code>,
+the test has passed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Troubleshooting test failures</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Problem: How do I examine the exact differences between <code>actual.txt</code> and <code>expected.txt</code>?<br>
+Solution: You can use a diff/merge tool with a GUI e.g. WinMerge (on Windows)</p>
+</li>
+<li>
+<p>Problem: The two files look exactly the same, but the test script reports they are different.<br>
+Solution: This can happen because the line endings used by Windows is different from Unix-based
+OSes. Convert the <code>actual.txt</code> to the format used by your OS using some <a href="https://kb.iu.edu/d/acux">utility</a>.</p>
+</li>
+<li>
+<p>Problem: Test fails during the very first time.<br>
+Solution: The output of the very first test run could be slightly different because the program
+creates a new storage file. Tests should pass from the 2nd run onwards.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-07-04 16:26:24 UTC
+</div>
+</div>
+</body>
+</html>

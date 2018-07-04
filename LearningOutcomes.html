@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>Learning Outcomes</title>
+<link rel="stylesheet" href="stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Learning Outcomes</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>After studying this code and completing the corresponding exercises, you should be able to,</p>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#set-up-a-project-in-an-ide-code-lo-idesetup-code">Set up a project in an IDE <code>[LO-IdeSetup]</code></a></li>
+<li><a href="#navigate-code-efficiently-code-lo-codenavigation-code">Navigate code efficiently <code>[LO-CodeNavigation]</code></a></li>
+<li><a href="#use-a-debugger-code-lo-debugging-code">Use a debugger <code>[LO-Debugging]</code></a></li>
+<li><a href="#automate-cli-testing-code-lo-automatedclitesting-code">Automate CLI testing <code>[LO-AutomatedCliTesting]</code></a></li>
+<li><a href="#use-collections-code-lo-collections-code">Use Collections <code>[LO-Collections]</code></a></li>
+<li><a href="#use-enums-code-lo-enums-code">Use Enums <code>[LO-Enums]</code></a></li>
+<li><a href="#use-varargs-code-lo-varargs-code">Use Varargs <code>[LO-Varargs]</code></a></li>
+<li><a href="#follow-a-coding-standard-code-lo-codingstandard-code">Follow a coding standard <code>[LO-CodingStandard]</code></a></li>
+<li><a href="#apply-coding-best-practices-code-lo-codingbestpractices-code">Apply coding best practices <code>[LO-CodingBestPractices]</code></a></li>
+<li><a href="#refactor-code-code-lo-refactor-code">Refactor code <code>[LO-Refactor]</code></a></li>
+<li><a href="#abstract-methods-well-code-lo-methodabstraction-code">Abstract methods well <code>[LO-MethodAbstraction]</code></a></li>
+<li><a href="#follow-slap-code-lo-slap-code">Follow SLAP <code>[LO-SLAP]</code></a></li>
+<li><a href="#work-in-a-1kloc-code-base-code-lo-1kloc-code">Work in a 1kLoC code base <code>[LO-1KLoC]</code></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="set-up-a-project-in-an-ide-code-lo-idesetup-code"><a class="link" href="#set-up-a-project-in-an-ide-code-lo-idesetup-code">Set up a project in an IDE <code>[LO-IdeSetup]</code></a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Learn <a href="https://se-edu.github.io/se-book/intellij/projectSetup/">how to set up a project in IntelliJ</a>.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="exercise-setup-project-in-intellij"><a class="link" href="#exercise-setup-project-in-intellij">Exercise: Setup project in IntelliJ</a></h3>
+<div class="paragraph">
+<p>Part A:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a new project in IntelliJ and write a small HelloWorld program.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Part B:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Download the source code for this project: Click on the <code>clone or download</code> link above and either,</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>download as a zip file and unzip content.</p>
+</li>
+<li>
+<p>clone the repo (if you know how to use Git) to your Computer.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><a href="DeveloperGuide.html#SettingUp">Set up</a> the project in IntelliJ.</p>
+</li>
+<li>
+<p><a href="UserGuide.html#StartingTheProgram">Run the program</a> from within IntelliJ, and try the features described in
+the <a href="UserGuide.html">User Guide</a> section.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="navigate-code-efficiently-code-lo-codenavigation-code"><a class="link" href="#navigate-code-efficiently-code-lo-codenavigation-code">Navigate code efficiently <code>[LO-CodeNavigation]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>AddressBook.java</code> code is rather long, which makes it cumbersome to navigate by scrolling alone.
+Navigating code using IDE shortcuts is a more efficient option.
+For example, CTRL+B will navigate to the definition of the method/field at the cursor.</p>
+</div>
+<div class="paragraph">
+<p>Learn <a href="https://se-edu.github.io/se-book/intellij/codeNavigation/">basic IntelliJ code navigation features</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="exercise-learn-to-navigate-code-using-shortcuts"><a class="link" href="#exercise-learn-to-navigate-code-using-shortcuts">Exercise: Learn to navigate code using shortcuts</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Use Intellij basic code navigation features to navigate code of this project.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-a-debugger-code-lo-debugging-code"><a class="link" href="#use-a-debugger-code-lo-debugging-code">Use a debugger <code>[LO-Debugging]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn <a href="https://se-edu.github.io/se-book/intellij/debuggingBasic/">basic IntelliJ debugging features</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="exercise-learn-to-step-through-code-using-the-debugger"><a class="link" href="#exercise-learn-to-step-through-code-using-the-debugger">Exercise: Learn to step through code using the debugger</a></h3>
+<div class="paragraph">
+<p>Prerequisite: <code>[LO-IdeSetup]</code></p>
+</div>
+<div class="paragraph">
+<p>Demonstrate your debugging skills using the AddressBook code.</p>
+</div>
+<div class="paragraph">
+<p>Here are some things you can do in your demonstration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set a 'break point'</p>
+</li>
+<li>
+<p>Run the program in debug mode</p>
+</li>
+<li>
+<p>'Step through' a few lines of code while examining variable values</p>
+</li>
+<li>
+<p>'Step into', and 'step out of', methods as you step through the code</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="automate-cli-testing-code-lo-automatedclitesting-code"><a class="link" href="#automate-cli-testing-code-lo-automatedclitesting-code">Automate CLI testing <code>[LO-AutomatedCliTesting]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn <a href="https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/">how to automate testing of CLIs</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="exercise-practice-automated-cli-testing"><a class="link" href="#exercise-practice-automated-cli-testing">Exercise: Practice automated CLI testing</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Run the tests as explained in the <a href="DeveloperGuide.html#Testing">Testing</a> section.</p>
+</li>
+<li>
+<p>Examine the test script to understand how the script works.</p>
+</li>
+<li>
+<p>Add a few more tests to the <code>input.txt</code>. Run the tests. It should fail.
+Modify <code>expected.txt</code> to make the tests pass again.</p>
+</li>
+<li>
+<p>Edit the <code>AddressBook.java</code> to modify the behavior slightly and modify tests to match.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-collections-code-lo-collections-code"><a class="link" href="#use-collections-code-lo-collections-code">Use Collections <code>[LO-Collections]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Note how the <code>AddressBook</code> class uses <code>ArrayList&lt;&gt;</code> class (from the Java <code>Collections</code> library) to store a list of <code>String</code> or <code>String[]</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>Learn <a href="https://se-edu.github.io/se-book/javaTools/collections/">how to use some Java <code>Collections</code> classes, such as <code>ArrayList</code> and <code>HashMap</code></a></p>
+</div>
+<div class="sect2">
+<h3 id="exercise-use-code-hashmap-code"><a class="link" href="#exercise-use-code-hashmap-code">Exercise: Use <code>HashMap</code></a></h3>
+<div class="paragraph">
+<p>Currently, a person&#8217;s details are stored as a <code>String[]</code>. Modify the code to use a <code>HashMap&lt;String, String&gt;</code> instead.
+A sample code snippet is given below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">String</span> PERSON_PROPERTY_NAME = <span class="string"><span class="delimiter">&quot;</span><span class="content">name</span><span class="delimiter">&quot;</span></span>;
+<span class="directive">private</span> <span class="directive">static</span> <span class="directive">final</span> <span class="predefined-type">String</span> PERSON_PROPERTY_EMAIL = <span class="string"><span class="delimiter">&quot;</span><span class="content">email</span><span class="delimiter">&quot;</span></span>;
+...
+HashMap&lt;<span class="predefined-type">String</span>,<span class="predefined-type">String</span>&gt; john = <span class="keyword">new</span> <span class="predefined-type">HashMap</span>&lt;&gt;();
+john.put(PERSON_PROPERTY_NAME, <span class="string"><span class="delimiter">&quot;</span><span class="content">John Doe</span><span class="delimiter">&quot;</span></span>);
+john.put(PERSON_PROPERTY_EMAIL, <span class="string"><span class="delimiter">&quot;</span><span class="content">john.doe@email.com</span><span class="delimiter">&quot;</span></span>);
+<span class="comment">//etc.</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-enums-code-lo-enums-code"><a class="link" href="#use-enums-code-lo-enums-code">Use Enums <code>[LO-Enums]</code></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="exercise-use-code-hashmap-code-code-enum-code"><a class="link" href="#exercise-use-code-hashmap-code-code-enum-code">Exercise: Use <code>HashMap</code> + <code>Enum</code></a></h3>
+<div class="paragraph">
+<p>Similar to the exercise in the <code>LO-Collections</code> section, but also bring in Java <code>enum</code> feature.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="directive">private</span> <span class="type">enum</span> PersonProperty  {NAME, EMAIL, PHONE};
+...
+HashMap&lt;PersonProperty,<span class="predefined-type">String</span>&gt; john = <span class="keyword">new</span> <span class="predefined-type">HashMap</span>&lt;&gt;();
+john.put(PersonProperty.NAME, <span class="string"><span class="delimiter">&quot;</span><span class="content">John Doe</span><span class="delimiter">&quot;</span></span>);
+john.put(PersonProperty.EMAIL, <span class="string"><span class="delimiter">&quot;</span><span class="content">john.doe@email.com</span><span class="delimiter">&quot;</span></span>);
+<span class="comment">//etc.</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="use-varargs-code-lo-varargs-code"><a class="link" href="#use-varargs-code-lo-varargs-code">Use Varargs <code>[LO-Varargs]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Note how the <code>showToUser</code> method uses <a href="https://se-edu.github.io/se-book/javaTools/varargs/">Java Varargs feature</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="exercise-use-varargs"><a class="link" href="#exercise-use-varargs">Exercise: Use Varargs</a></h3>
+<div class="paragraph">
+<p>Modify the code to remove the use of the Varargs feature.
+Compare the code with and without the varargs feature.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="follow-a-coding-standard-code-lo-codingstandard-code"><a class="link" href="#follow-a-coding-standard-code-lo-codingstandard-code">Follow a coding standard <code>[LO-CodingStandard]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The given code follows the <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">coding standard</a>
+for the most part.</p>
+</div>
+<div class="paragraph">
+<p>This learning outcome is covered by the exercise in <code>[LO-Refactor]</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="apply-coding-best-practices-code-lo-codingbestpractices-code"><a class="link" href="#apply-coding-best-practices-code-lo-codingbestpractices-code">Apply coding best practices <code>[LO-CodingBestPractices]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most of the given code follows the best practices mentioned
+<a href="https://se-edu.github.io/se-book/codeQuality/">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>This learning outcome is covered by the exercise in <code>[LO-Refactor]</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refactor-code-code-lo-refactor-code"><a class="link" href="#refactor-code-code-lo-refactor-code">Refactor code <code>[LO-Refactor]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Resources</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://se-edu.github.io/se-book/refactoring/">se-edu/se-book: Refactoring</a></p>
+</li>
+<li>
+<p><a href="https://se-edu.github.io/se-book/intellij/refactoring/">se-edu/se-book: Refactoring in Intellij</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="exercise-refactor-the-code-to-make-it-better"><a class="link" href="#exercise-refactor-the-code-to-make-it-better">Exercise: Refactor the code to make it better</a></h3>
+<div class="paragraph">
+<p>Note: this exercise covers two other Learning Outcomes: <code>[LO-CodingStandard]</code>, <code>[LO-CodingBestPractices]</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Improve the code in the following ways,</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix <a href="https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md">coding standard</a>
+violations.</p>
+</li>
+<li>
+<p>Fix violations of the best practices given in <a href="https://se-edu.github.io/se-book/codeQuality/">in this document</a>.</p>
+</li>
+<li>
+<p>Any other change that you think will improve the quality of the code.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Try to do the modifications as a combination of standard refactorings given in this
+<a href="http://refactoring.com/catalog/">catalog</a></p>
+</li>
+<li>
+<p>As far as possible, use automated refactoring features in IntelliJ.</p>
+</li>
+<li>
+<p>If you know how to use Git, commit code after each refactoring.
+In the commit message, mention which refactoring you applied.
+Example commit messages: <code>Extract variable isValidPerson</code>, <code>Inline method isValidPerson()</code></p>
+</li>
+<li>
+<p>Remember to run the test script after each refactoring to prevent <a href="https://se-edu.github.io/se-book/testing/testingTypes/regressionTesting">regressions</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="abstract-methods-well-code-lo-methodabstraction-code"><a class="link" href="#abstract-methods-well-code-lo-methodabstraction-code">Abstract methods well <code>[LO-MethodAbstraction]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Notice how most of the methods in <code>AddressBook</code> are short and focused (does only one thing and does it well).</p>
+</div>
+<div class="paragraph">
+<p><strong>Case 1</strong>. Consider the following three lines in the <code>main</code> method.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">    <span class="predefined-type">String</span> userCommand = getUserInput();
+    echoUserCommand(userCommand);
+    <span class="predefined-type">String</span> feedback = executeCommand(userCommand);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we include the code of <code>echoUserCommand(String)</code> method inside the <code>getUserInput()</code>
+(resulting in the code given below), the behavior of AddressBook remains as before.
+However, that is a not a good approach because now the <code>getUserInput()</code> is doing two distinct things.
+A well-abstracted method should do only one thing.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">    <span class="predefined-type">String</span> userCommand = getUserInput(); <span class="comment">//also echos the command back to the user</span>
+    <span class="predefined-type">String</span> feedback = executeCommand(userCommand);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Case 2</strong>. Consider the method <code>removePrefixSign(String s, String sign)</code>.
+While it is short, there are some problems with how it has been abstracted.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>It contains the term <code>sign</code> which is not a term used by the AddressBook vocabulary.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>A method adds a new term to the vocabulary used to express the solution</strong>.
+Therefore, it is not good when a method name contains terms that are not strictly necessary to express the
+solution (e.g. there is another term already used to express the same thing) or not in tune with the solution
+(e.g. it does not go well with the other terms already used).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Its implementation is not doing exactly what is advertised by the method name and the header comment.
+For example, the code does not remove only prefixes; it removes <code>sign</code> from anywhere in the <code>s</code>.</p>
+</li>
+<li>
+<p>The method can be <em>more general</em> and <em>more independent</em> from the rest of the code. For example,
+the method below can do the same job, but is more general (works for any string, not just parameters)
+and is more independent from the rest of the code (not specific to AddressBook)</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span class="comment">/**
+ * Removes prefix from the given fullString if prefix occurs at the start of the string.
+ */</span>
+ <span class="directive">private</span> <span class="directive">static</span> <span class="predefined-type">String</span> removePrefix(<span class="predefined-type">String</span> fullString, <span class="predefined-type">String</span> prefix) { ... }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If needed, a more AddressBook-specific method that works on parameter strings only can be defined.
+In that case, that method can make use of the more general method suggested above.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="exercise-improve-abstraction-of-method"><a class="link" href="#exercise-improve-abstraction-of-method">Exercise: Improve abstraction of method</a></h3>
+<div class="paragraph">
+<p>Refactor the method <code>removePrefixSign</code> as suggested above.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="follow-slap-code-lo-slap-code"><a class="link" href="#follow-slap-code-lo-slap-code">Follow SLAP <code>[LO-SLAP]</code></a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Notice how most of the methods in <code>AddressBook</code> are written at a single
+level of abstraction (<em>cf</em> <a href="https://se-edu.github.io/se-book/codeQuality/practices/slapHard/">se-edu/se-book:SLAP</a>)</p>
+</div>
+<div class="paragraph">
+<p>Here is an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">    <span class="directive">public</span> <span class="directive">static</span> <span class="type">void</span> main(<span class="predefined-type">String</span><span class="type">[]</span> args) {
+        showWelcomeMessage();
+        processProgramArgs(args);
+        loadDataFromStorage();
+        <span class="keyword">while</span> (<span class="predefined-constant">true</span>) {
+            userCommand = getUserInput();
+            echoUserCommand(userCommand);
+            <span class="predefined-type">String</span> feedback = executeCommand(userCommand);
+            showResultToUser(feedback);
+        }
+    }</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exercise-1-reduce-slap-of-method"><a class="link" href="#exercise-1-reduce-slap-of-method">Exercise 1: Reduce SLAP of method</a></h3>
+<div class="paragraph">
+<p>In the <code>main</code> method, replace the <code>processProgramArgs(args)</code> call with the actual code of that method.
+The <code>main</code> method no longer has SLAP. Notice how mixing low level code with high level code reduces
+readability.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exercise-2-refactor-the-code-to-make-it-worse"><a class="link" href="#exercise-2-refactor-the-code-to-make-it-worse">Exercise 2: Refactor the code to make it worse!</a></h3>
+<div class="paragraph">
+<p>Sometimes, going in the wrong direction can be a good learning experience too.
+In this exercise, we explore how low code qualities can go.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Refactor the code to make the code as bad as possible.
+i.e. How bad can you make it without breaking the functionality while still making it look like it was written by a
+programmer (but a very bad programmer :-)).</p>
+</li>
+<li>
+<p>In particular, inlining methods can worsen the code quality fast.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="work-in-a-1kloc-code-base-code-lo-1kloc-code"><a class="link" href="#work-in-a-1kloc-code-base-code-lo-1kloc-code">Work in a 1kLoC code base <code>[LO-1KLoC]</code></a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="exercise-enhance-the-code"><a class="link" href="#exercise-enhance-the-code">Exercise: Enhance the code</a></h3>
+<div class="paragraph">
+<p>Enhance the AddressBook to prove that you can work in a codebase of 1KLoC.
+Remember to change code in small steps, update/run tests after each change, and commit after each significant change.</p>
+</div>
+<div class="paragraph">
+<p>Some suggested enhancements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make the <code>find</code> command case insensitive e.g. <code>find john</code> should match <code>John</code></p>
+</li>
+<li>
+<p>Add a <code>sort</code> command that can list the persons in alphabetical order</p>
+</li>
+<li>
+<p>Add an <code>edit</code> command that can edit properties of a specific person</p>
+</li>
+<li>
+<p>Add an additional field (like date of birth) to the person record</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-07-04 16:26:24 UTC
+</div>
+</div>
+</body>
+</html>
