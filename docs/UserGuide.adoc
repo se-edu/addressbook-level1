@@ -1,4 +1,5 @@
 = AddressBook Level 1 - User Guide
+:site-section: UserGuide
 :stylesDir: stylesheets
 ifdef::env-github[]
 :tip-caption: :bulb:
