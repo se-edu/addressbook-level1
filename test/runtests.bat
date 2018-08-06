@@ -5,6 +5,11 @@ if not exist ..\bin mkdir ..\bin
 
 REM compile the code into the bin folder
 javac  ..\src\seedu\addressbook\Addressbook.java -d ..\bin
+IF ERRORLEVEL 1 (
+    echo ********** BUILD FAILURE ********** 
+    exit /b 1
+)
+REM no error here, errorlevel == 0
 
 REM (invalid) no parent directory, invalid filename with no extension
 java -classpath ..\bin seedu.addressbook.AddressBook " " < NUL > actual.txt

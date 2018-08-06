@@ -9,8 +9,12 @@ then
     mkdir ../bin
 fi
 
-# compile the code into the bin folder
-javac  ../src/seedu/addressbook/AddressBook.java -d ../bin
+# compile the code into the bin folder, terminates if error occurred
+if ! javac  ../src/seedu/addressbook/AddressBook.java -d ../bin
+then
+    echo "********** BUILD FAILURE **********"
+    exit 1
+fi
 
 # (invalid) no parent directory, invalid filename with no extension
 java -classpath ../bin seedu.addressbook.AddressBook ' ' < /dev/null > actual.txt
