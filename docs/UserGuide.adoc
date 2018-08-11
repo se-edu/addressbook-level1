@@ -25,7 +25,7 @@ Please refer to the <<DeveloperGuide#SettingUp, Setting up>> section to learn ho
 
 . 'Build' the project using IntelliJ (`Build` -> `Build Project`)
 . Open the `Terminal`/`Command Prompt`. Note: You can open a terminal inside Intellij too (`View` -> `Tool Windows` -> `Terminal`)
-. `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files.
+. `cd` into the project's `out\production\addressbook-level1` directory. Note: That is the where Intellij puts its compiled class files
 . Type `java seedu.addressbook.AddressBook`, then Enter to execute
 . Now you can interact with the program through the CLI
 

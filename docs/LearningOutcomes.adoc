@@ -77,7 +77,7 @@ Modify `expected.txt` to make the tests pass again.
 
 Note how the `AddressBook` class uses `ArrayList<>` class (from the Java `Collections` library) to store a list of `String` or `String[]` objects.
 
-Learn https://se-edu.github.io/se-book/javaTools/collections/[how to use some Java `Collections` classes, such as `ArrayList` and `HashMap`]
+Learn https://se-edu.github.io/se-book/cppToJava/collections/[how to use some Java `Collections` classes, such as `ArrayList` and `HashMap`]
 
 === Exercise: Use `HashMap`
 
@@ -122,7 +122,7 @@ Compare the code with and without the varargs feature.
 
 == Follow a coding standard `[LO-CodingStandard]`
 
-The given code follows the https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md[coding standard]
+The given code follows the https://oss-generic.github.io/process/codingStandards/CodingStandard-Java[coding standard]
 for the most part.
 
 This learning outcome is covered by the exercise in `[LO-Refactor]`.
@@ -146,7 +146,7 @@ This learning outcome is covered by the exercise in `[LO-Refactor]`
 Note: this exercise covers two other Learning Outcomes: `[LO-CodingStandard]`, `[LO-CodingBestPractices]`
 
 * Improve the code in the following ways,
-** Fix https://github.com/oss-generic/process/blob/master/codingStandards/CodingStandard-Java.md[coding standard]
+** Fix https://oss-generic.github.io/process/codingStandards/CodingStandard-Java[coding standard]
 violations.
 ** Fix violations of the best practices given in https://se-edu.github.io/se-book/codeQuality/[in this document].
 ** Any other change that you think will improve the quality of the code.
@@ -219,7 +219,7 @@ Refactor the method `removePrefixSign` as suggested above.
 == Follow SLAP `[LO-SLAP]`
 
 Notice how most of the methods in `AddressBook` are written at a single
-level of abstraction (_cf_ https://se-edu.github.io/se-book/codeQuality/practices/slapHard/[se-edu/se-book:SLAP])
+level of abstraction (_cf_ https://se-edu.github.io/se-book/codeQuality/maximiseReadability/intermediate/slapHard/[se-edu/se-book:SLAP])
 
 Here is an example:
 
