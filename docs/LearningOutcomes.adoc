@@ -6,6 +6,7 @@
 :stylesDir: stylesheets
 ifdef::env-github[]
 :note-caption: :information_source:
+:site-githuburl: ../../../
 endif::[]
 
 After studying this code and completing the corresponding exercises, you should be able to,
@@ -24,7 +25,7 @@ Part A:
 
 Part B:
 
-* Download the source code for this project: Click on the `clone or download` link above and either,
+* Download the source code for this project: Click on the link:{site-githuburl}[`clone or download` button in the project's GitHub homepage] and either,
 . download as a zip file and unzip content.
 . clone the repo (if you know how to use Git) to your Computer.
 * <<DeveloperGuide#SettingUp, Set up>> the project in IntelliJ.
