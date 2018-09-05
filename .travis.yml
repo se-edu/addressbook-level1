@@ -7,7 +7,7 @@ install:
   - ./config/travis/download_gradle_wrapper.sh
 
 script: >-
-    ./gradlew
+    ./gradlew -b build.gradle.txt
 
 deploy:
   skip_cleanup: true
