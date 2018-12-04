@@ -25,3 +25,8 @@ test/data/
 # Gradle files
 /.gradle/
 /build/
+
+# Gradle wrapper
+/gradle/
+/gradlew
+/gradlew.bat
