@@ -7,7 +7,7 @@ REM create bin directory if it doesn't exist
 if not exist ..\bin mkdir ..\bin
 
 REM compile the code into the bin folder
-javac  ..\src\seedu\addressbook\Addressbook.java -d ..\bin
+javac ..\src\seedu\addressbook\AddressBook.java -d ..\bin
 IF ERRORLEVEL 1 (
     echo ********** BUILD FAILURE ********** 
     REM return to previous directory
