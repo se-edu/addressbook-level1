@@ -17,7 +17,7 @@ hs_err_pid*
 *.iml
 
 # Temp files used for testing
-test/actual.txt
+test/ACTUAL.TXT
 test/localrun.bat
 test/data/
 /bin/

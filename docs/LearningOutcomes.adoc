@@ -71,7 +71,7 @@ Learn https://se-edu.github.io/se-book/testing/testAutomation/testingTextUis/[ho
 * Run the tests as explained in the <<DeveloperGuide#Testing, Testing>> section.
 * Examine the test script to understand how the script works.
 * Add a few more tests to the `input.txt`. Run the tests. It should fail.
-Modify `expected.txt` to make the tests pass again.
+Modify `EXPECTED.TXT` to make the tests pass again.
 * Edit the `AddressBook.java` to modify the behavior slightly and modify tests to match.
 
 == Use Collections `[LO-Collections]`
