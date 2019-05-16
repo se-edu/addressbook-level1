@@ -3,6 +3,8 @@
 // user guide available at http://gradle.org/docs/4.8.1/userguide/tutorial_java_projects.html
 
 plugins {
+    id 'java'
+    id 'checkstyle'
     id 'org.asciidoctor.convert' version '1.5.6'
 }
 
@@ -35,6 +37,18 @@ asciidoctor {
     }
 }
 
+checkstyle {
+    toolVersion = '8.1'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
 // Copies stylesheets into the directory containing generated HTML files as
 // Asciidoctor does not copy linked CSS files to the output directory when rendering.
 // This is needed for linked stylesheets and embedded stylesheets which import other files.
@@ -44,4 +58,4 @@ task copyStylesheets(type: Copy) {
 }
 asciidoctor.dependsOn copyStylesheets
 
-defaultTasks 'clean', 'asciidoctor'
+defaultTasks 'clean', 'asciidoctor', 'checkstyleMain'
