@@ -1,7 +1,7 @@
 language: java
 matrix:
   include:
-    - jdk: oraclejdk11
+    - jdk: openjdk11
 
 install:
   - ./config/travis/download_gradle_wrapper.sh
@@ -15,11 +15,6 @@ deploy:
   script: ./config/travis/deploy_github_pages.sh
   on:
     branch: master
-
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
